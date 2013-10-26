@@ -23,6 +23,7 @@ public class TestGameEngine {
 				System.out.println("rewards are: "+reward.getPoints());
 				*/
 				//this is test code and please delete it after testing
+	  			System.out.println("helloo check");
 				List<Act> actList=gameModel.getActs();
 				if(actList==null)
 					System.out.println("list is null");
