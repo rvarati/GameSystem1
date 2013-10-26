@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Top level game -->
+<game>
+<!-- Test Game 3 contains 2 acts, one default character and one non playing character -->
+<!-- -->
+<!-- -->
+<!-- Test game 3 has a default player who is intialized with 1000 points -->
+	<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:type="PLAYER">
+	<location>OSR</location>
+	<size>LARGE</size>
+		<profile>
+			<name> Default Player </name>
+			<type> Protagonist </type>
+			<title> Intern, Software Engineering </title>
+			<skills> Software Engineering, Project Management, Configuration Management </skills>
+			<experience> 0 </experience>
+			<communication> Good </communication>
+			<leadership> Good </leadership>
+			<teamwork> Good </teamwork>
+			<demographics> Male, Caucasian </demographics>
+			<degrees> NONE </degrees>			
+		</profile>		
+		<reward>
+			<certificates>0</certificates>
+			<hint>0</hint>
+			<points>1000</points>
+			<promotions>0</promotions>
+			<trophies>0</trophies>			
+		</reward>
+	</gameElement>
+
+<!-- Test game 3 also has a non player character i.e., the instructor Ima Coder -->
+	<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:type="NONPLAYER">
+	<location>OSR</location>
+	<size>LARGE</size>
+		<profile>
+			<name> Ima Coder </name>
+			<id> Character1 </id>
+			<type> NonPlayer </type>
+			<title> Instructor </title>
+			<skills> Software Engineering, Project Management, Capstone Project courses </skills>
+			<experience> 5 </experience>
+			<communication> Excellent </communication>
+			<leadership> Excellent </leadership>
+			<teamwork> Excellent </teamwork>
+			<demographics> Female, Caucasian </demographics>
+			<degrees> B.Sc., Computer Science, Stanford University, Ph.D.  Computer Science, Stanford University </degrees>			
+		</profile>	
+		</gameElement>
+<!-- -->
+<!-- -->
+<!-- The following section defines the constant values in the test game 3 -->
+<gameConstants>
+	<timer name="QUICK">
+		<value>500</value>
+	</timer>
+	<timer name="SCREEN_MEDIUM">
+		<value>6000</value>
+	</timer>
+	<timer name="SCENE_MEDIUM">
+		<value>24000</value>
+	</timer>
+</gameConstants>
+
+	<!-- 		-->
+	<!-- The Structural description of the game starts here-->
+	<!-- 		-->
+
+<gameStructure>
+	<actStructure>
+		<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="IDENTIFIER">
+			<id> act1 </id>
+		</gameElement>
+		<sceneStructure>
+			<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+						xsi:type="IDENTIFIER">
+						<id> scene1 </id>
+			</gameElement>
+			<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+					xsi:type="BACKDROP">
+					<!-- -->
+					<!-- The backdrop is presented -->
+					<!-- -->
+					<name>BlueSky.png</name>
+			</gameElement>
+				<screenStructure>
+				<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+						xsi:type="prop">
+						<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							xsi:type="IDENTIFIER">
+							<id> screen1 </id>
+						</gameElement>	
+						<type>
+							<typeName>InformationBox</typeName>
+							<event>
+								<eventName>NONE</eventName>
+								<animation>FADEIN</animation>
+								<time>QUICK</time>
+								<action> SHOW </action>
+							</event>
+							<event>
+								<eventName>ENDSCREEN</eventName>
+								<animation>FADEOUT</animation>
+								<time>QUICK</time>
+								<action> HIDE </action>
+							</event>
+							<behavior> NONE </behavior>
+							<color>YELLOW</color>
+							<location>UC</location>
+							<size>MEDIUM</size>
+							<!--	 -->
+							<!-- 	 -->
+							<text> Welcome! Test Game 3</text>
+							<next> NONE </next>
+							<time> NONE </time>
+						</type>
+						<type>
+							<typeName>Button</typeName>
+							<event>
+								<eventName>NONE</eventName>
+								<animation>FADEIN</animation>
+								<time>QUICK</time>
+								<action> SHOW </action>
+							</event>
+							<event>
+								<eventName>CLICK</eventName>
+								<animation>FADEOUT</animation>
+								<time>QUICK</time>
+								<action> HIDE </action>
+							</event>
+							<behavior> NONE </behavior>
+							<color>YELLOW</color>
+							<location>UC</location>
+							<size>MEDIUM</size>
+							<text> Continue...</text>
+							<next> screen2 </next>
+							<time> NONE </time>
+						</type>
+					</gameElement>
+				</screenStructure>
+				<screenStructure>
+						<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+						xsi:type="prop">
+						<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							xsi:type="IDENTIFIER">
+							<id> screen2 </id>
+						</gameElement>	
+						<type>
+							<typeName>InformationBox</typeName>
+							<event>
+								<eventName>NONE</eventName>
+								<animation>FADEIN</animation>
+								<time>QUICK</time>
+								<action> SHOW </action>
+							</event>
+							<event>
+								<eventName>ENDSCREEN</eventName>
+								<animation>FADEOUT</animation>
+								<time>QUICK</time>
+								<action> HIDE </action>
+							</event>
+							<behavior> NONE </behavior>
+							<color>YELLOW</color>
+							<location>UC</location>
+							<size>MEDIUM</size>
+							<!--	 -->
+							<!-- 	 -->
+							<text> A SotiCorp Game </text>
+							<next> NONE </next>
+							<time> NONE </time>
+						</type>
+						<type>
+							<typeName>Button</typeName>
+							<event>
+								<eventName>NONE</eventName>
+								<animation>FADEIN</animation>
+								<time>QUICK</time>
+								<action> SHOW </action>
+							</event>
+							<event>
+								<eventName>CLICK</eventName>
+								<animation>FADEOUT</animation>
+								<time>QUICK</time>
+								<action> HIDE </action>
+							</event>
+							<behavior> NONE </behavior>
+							<color>YELLOW</color>
+							<location>UC</location>
+							<size>MEDIUM</size>
+							<text> Continue To Scene 2</text>
+							<next> scene2 </next>
+							<time> NONE </time>
+						</type>
+					</gameElement>
+				</screenStructure>
+		</sceneStructure>
+		<sceneStructure>
+			<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+						xsi:type="IDENTIFIER">
+						<id> scene2 </id>
+			</gameElement>
+			<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+					xsi:type="BACKDROP">
+					<!-- -->
+					<!-- The backdrop is presented -->
+					<!-- -->
+					<name>CollegeBuilding.png</name>
+			</gameElement>
+			<screenStructure>
+				<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+						xsi:type="prop">
+						<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							xsi:type="IDENTIFIER">
+							<id> screen1 </id>
+						<type>
+							<typeName>NONE</typeName>
+							<event>
+								<eventName>NONE</eventName>
+								<animation>NONE</animation>
+								<time>NONE</time>
+								<action>NONE</action>
+							</event>
+							<event>
+								<eventName>NONE</eventName>
+								<animation>NONE</animation>
+								<time>NONE</time>
+								<action> NONE </action>
+							</event>
+							<behavior> NONE </behavior>
+							<color>NONE</color>
+							<location>NONE</location>
+							<size>NONE</size>
+							<!--	 -->
+							<!-- 	 -->
+							<text> NONE </text>
+							<next> NONE </next>
+							<time> NONE </time>
+						</type>
+						</gameElement>
+				</gameElement>			
+			</screenStructure>
+			<screenStructure>
+				<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+						xsi:type="prop">
+						<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							xsi:type="IDENTIFIER">
+							<id> screen2 </id>
+						</gameElement>
+						<type>							
+							<typeName> Character1StandClosed.png </typeName>
+							<event>
+								<eventName>NONE</eventName>
+								<animation>FADEIN</animation>
+								<time>QUICK</time>
+								<action> SHOW </action>
+							</event>
+							<event>
+								<eventName>Hover</eventName>
+								<animation>FADEIN</animation>
+								<element>MessageBox</element>
+								<location>UL</location>
+							<text>
+								<name> Ima Coder </name>
+								<id> Character1 </id>
+								<type> NonPlayer </type>
+								<title> Instructor </title>
+								<skills> Software Engineering, Project Management, Capstone Project courses </skills>
+								<experience> 5 </experience>
+								<communication> Excellent </communication>
+								<leadership> Excellent </leadership>
+								<teamwork> Excellent </teamwork>
+								<demographics> Female, Caucasian </demographics>
+								<degrees> B.Sc., Computer Science, Stanford University, Ph.D.  Computer Science, Stanford University </degrees>		 
+							</text>
+							</event>
+							<next> screen3_a </next>
+							<time> SCREEN_MEDIUM </time>				
+						</type>
+				</gameElement>			
+			</screenStructure>
+			<screenStructure>
+						<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+						xsi:type="prop">
+						<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							xsi:type="IDENTIFIER">
+							<id> screen3_a </id>
+						</gameElement>
+						<type>
+							<typeName>Character1StandClosed.png</typeName>							
+							<event>
+								<eventName>NONE</eventName>
+								<animation>FADEIN</animation>
+								<time>QUICK</time>
+								<action> SHOW </action>
+							</event>
+							<event>
+								<eventName>NONE</eventName>
+								<animation>SHOW</animation>
+								<element>MessageBox</element>
+								<location>UL</location>
+							<text>
+								Hello, my name is Dr. Ima Coder, I teach here at Steven B. Allmer School of Software Engineering.  Over the course of this game, you will practice a variety of software engineering skills that are commonly used in industry.
+							</text>
+							</event>
+							<next> act2 </next>
+							<time> SCREEN_MEDIUM </time>				
+						</type>
+				</gameElement>
+			</screenStructure>
+		</sceneStructure>
+	</actStructure>
+	<actStructure>
+		<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="IDENTIFIER">
+			<id> act2 </id>
+		</gameElement>
+		<sceneStructure>
+			<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+						xsi:type="IDENTIFIER">
+						<id> scene1 </id>
+			</gameElement>
+			<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+					xsi:type="BACKDROP">
+					<!-- -->
+					<!-- The backdrop is presented -->
+					<!-- -->
+					<name>BlueSky.png</name>
+			</gameElement>
+			<screenStructure>
+				<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+						xsi:type="prop">
+						<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							xsi:type="IDENTIFIER">
+							<id> screen1 </id>
+						</gameElement>	
+						<type>
+							<typeName>InformationBox</typeName>
+							<event>
+								<eventName>NONE</eventName>
+								<animation>FADEIN</animation>
+								<time>QUICK</time>
+							</event>
+							<event>
+								<eventName>ENDGAME</eventName>
+								<animation>FADEOUT</animation>
+								<time>QUICK</time>
+								<action> HIDE </action>
+							</event>
+							<color>YELLOW</color>
+							<location>UC</location>
+							<size>MEDIUM</size>
+							<!--	 -->
+							<!-- 	 -->
+							<text> Thank you for playing Test Game 3! </text>
+						</type>
+						<type>
+							<typeName>Button</typeName>
+							<event>
+								<eventName>NONE</eventName>
+								<animation>FADEIN</animation>
+								<time>QUICK</time>
+							</event>
+							<event>
+								<eventName>CLICK</eventName>
+								<animation>FADEOUT</animation>
+								<time>QUICK</time>
+								<action> HIDE </action>
+							</event>
+							<color>YELLOW</color>
+							<location>UC</location>
+							<size>MEDIUM</size>
+							<text> End...</text>
+							<behavior> GameControl.stop </behavior>
+						</type>
+					</gameElement>
+			</screenStructure>
+		</sceneStructure>
+	</actStructure>
+	</gameStructure>
+	</game>
+

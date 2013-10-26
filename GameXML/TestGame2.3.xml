@@ -1,0 +1,1236 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- Top Level Game -->
+<game>
+<!-- Test Game2 contains 3 acts and one default character -->
+<!-- 		-->
+<!-- 		-->
+
+<!-- The game contains a default player who is rewarded with 5000 points after playing the game -->
+	<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:type="PLAYER">
+	<location>OSR</location>
+	<size>LARGE</size>
+	<!--		-->
+	<!-- The profile of the player starts here -->	
+	<!--		-->
+		<profile>
+			<name> Default Player </name>
+			<type> Protagonist </type>
+			<title> Intern, Software Engineering </title>
+			<skills> Software Engineering, Project Management, Configuration Management </skills>
+			<experience> 0 </experience>
+			<communication> Good </communication>
+			<leadership> Good </leadership>
+			<teamwork> Good </teamwork>
+			<demographics> Male, Caucasian </demographics>
+			<degrees> NONE </degrees>			
+		</profile>	
+		<reward>
+			<certificates>0</certificates>
+			<hint>0</hint>
+	<!--		-->
+	<!-- The player initally has 1000 points -->
+	<!--		-->
+			<points>1000</points>
+			<promotions>0</promotions>
+			<trophies>0</trophies>			
+		</reward>
+	</gameElement>
+<!-- 		-->
+<!-- 		-->
+<!-- The following section defines the constant values in the test game 2 -->
+<gameConstants>
+	<timer name="NONE">
+		<value>0</value>
+	</timer>
+	<timer name="QUICK">
+		<value>500</value>
+	</timer>
+	<timer name="MODERATE">
+		<value>700</value>
+	</timer>
+	<timer name="LONG">
+		<value>900</value>
+	</timer>
+	
+</gameConstants>
+<!--		-->
+<!--		-->
+<!--		-->
+<gameBehavior>
+	<!--		-->
+	<!-- The Sequential description of the game starts here-->
+	<!--		-->
+<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="SEQUENCEBEHAVIOR">
+	<actSequence>
+		<!---		-->
+		<!-- The act sequence begins here and has the scene and screen sequence embedded in it -->
+		<!-- The act 1 is identified as 'act1' and plays for ACT_SHORT amount of time -->
+		<!--		-->	
+		<sequence id="act1">
+		<behavior timeLimit="&lt;=ACT_SHORT"> PLAY </behavior>
+		<behavior timeLimit="&gt;ACT_SHORT"> STOP </behavior>
+		<!--		-->
+		<!-- The scene sequence corresponding to act 1 starts here -->
+		<!-- 		-->
+		<sceneSequence>
+		<!--		-->
+		<!-- The scene 1 is identifed as 'scene1' and has three screens embedded within it -->
+		<!--		-->
+		<!-- The scene 1 of act 1 is played for a SCENE_SHORT amount of time -->
+		<!--		-->
+			<sequence id="scene1">
+				<behavior  timeLimit="&lt;=SCENE_SHORT"> SHOW </behavior>
+				<behavior  timeLimit="&gt;SCENE_SHORT"> HIDE </behavior>			
+		<!--		-->	
+		<!-- The screen sequence for scene 1 of act 1 starts here -->		
+		<!--		-->
+			<screenSequence>
+		<!--   		-->	
+		<!-- All the screens under scene 1 are displayed for SHORT amount of time and FADEIN/FADEOUT within in 'QUICK' amount of time-->
+		<!--   		-->
+			<sequence id="screen1">			
+				<type>
+				<!--		-->
+				<!-- The screen 1 displays an information box for a SCREEN_SHORT amount of time-->
+				<!--		-->
+				<informationBox> InformationBox1 </informationBox>			
+				      <behavior timeLimit="&lt;=SCREEN_SHORT"> 
+					<transition>
+						<type> FADEIN </type>
+						<time> QUICK </time>
+					</transition>
+					<action> SHOW </action>
+				      </behavior>
+				      <behavior timeLimit="&gt;SCREEN_SHORT"> 
+					<transition>
+						<type> FADEOUT </type>
+						<time> QUICK </time>
+					</transition> 
+					<action> HIDE </action>
+				      </behavior>
+				</type>			
+			</sequence>
+			<!--		-->
+			<!-- The behavior description of screen 2 begins here -->
+			<!--		-->
+			<sequence id="screen2">	
+				<type>
+				<!--		-->
+				<!-- The screen 2 displays an information box for a SCREEN_SHORT amount of time-->
+				<!--		-->
+				<informationBox> InformationBox2 </informationBox>			
+				      <behavior timeLimit="&lt;=SCREEN_SHORT"> 
+					<transition>
+						<type> FADEIN </type>
+						<time> QUICK </time>
+					</transition>
+					<action> SHOW </action>
+				      </behavior>
+				      <behavior timeLimit="&gt;SCREEN_SHORT"> 
+					<transition>
+						<type> FADEOUT </type>
+						<time> QUICK </time>
+					</transition> 
+					<action> HIDE </action>
+				      </behavior>
+				</type>
+			</sequence>
+<!--		-->
+<!-- The behavior description of screen 3 begins here -->
+<!--		-->
+			<sequence id="screen3">			
+				<type>
+				<!--		-->
+				<!-- The screen 3 displays an information box for a SCREEN_SHORT amount of time-->
+				<!--		-->
+				<informationBox> InformationBox3 </informationBox>			
+				      <behavior timeLimit="&lt;=SCREEN_SHORT"> 
+					<transition>
+						<type> FADEIN </type>
+						<time> QUICK </time>
+					</transition>
+					<action> SHOW </action>
+				      </behavior>
+				      <behavior timeLimit="&gt;SCREEN_SHORT"> 
+					<transition>
+						<type> FADEOUT </type>
+						<time> QUICK </time>
+					</transition> 
+					<action> HIDE </action>
+				      </behavior>
+				</type>
+			</sequence>
+		</screenSequence>
+		</sequence>
+		<!--		-->
+		<!-- The behavior description of scene 2 of act 1 starts here --> 
+		<!--		-->
+		<sequence id="scene2">
+		<!--		-->
+		<!-- The scene 2 plays for a SCENE_SHORT amount of time --> 
+		<!--		-->
+				<behavior  timeLimit="&lt;=SCENE_SHORT"> SHOW </behavior>
+				<behavior  timeLimit="&gt;SCENE_SHORT"> HIDE </behavior>
+		<!--		-->
+		<!-- The screen sequence for scene 2 starts here and has three screens embedded in it --> 
+		<!--		-->
+		<screenSequence>
+		<sequence id="screen1">
+			<type>
+		<!--		-->
+		<!-- The screen 1 displays an information box for a SCREEN_SHORT amount of time -->
+		<!--		-->
+				<informationBox> InformationBox1 </informationBox>			
+				      <behavior timeLimit="&lt;=SCREEN_SHORT"> 
+					<transition>
+						<type> FADEIN </type>
+						<time> QUICK </time>
+					</transition>
+					<action> SHOW </action>
+				      </behavior>
+				      <behavior timeLimit="&gt;SCREEN_SHORT"> 
+					<transition>
+						<type> FADEOUT </type>
+						<time> QUICK </time>
+					</transition> 
+					<action> HIDE </action>
+				      </behavior>
+			</type>			
+		</sequence>
+		<!--		-->
+		<!--		-->
+		<sequence id="screen2">			
+			<type>
+		<!--		-->
+		<!-- The screen 2 displays an information box for a SCREEN_SHORT amount of time -->
+		<!--		-->
+			<informationBox> InformationBox2 </informationBox>			
+			      <behavior timeLimit="&lt;=SCREEN_SHORT"> 
+				<transition>
+					<type> FADEIN </type>
+					<time> QUICK </time>
+				</transition>
+				<action> SHOW </action>
+			      </behavior>
+			      <behavior timeLimit="&gt;SCREEN_SHORT"> 
+			        <transition>
+					<type> FADEOUT </type>
+					<time> QUICK </time>
+				</transition> 
+			        <action> HIDE </action>
+			      </behavior>
+			</type>
+		</sequence>
+		<sequence id="screen3">
+			<type>
+		<!--		-->
+		<!-- The screen 3 displays an information box for a SCREEN_SHORT amount of time -->
+		<!--		-->
+			<informationBox> InformationBox3 </informationBox>			
+			      <behavior timeLimit="&lt;=SCREEN_SHORT"> 
+				<transition>
+					<type> FADEIN </type>
+					<time> QUICK </time>
+				</transition>
+				<action> SHOW </action>
+			      </behavior>
+			      <behavior timeLimit="&gt;SCREEN_SHORT"> 
+			        <transition>
+					<type> FADEOUT </type>
+					<time> QUICK </time>
+				</transition> 
+			        <action> HIDE </action>
+			      </behavior>
+			</type>
+		</sequence>
+		</screenSequence>			
+		</sequence>
+		<!--		-->
+		<!--		-->
+		<sequence id="scene3">
+		<!--		-->
+		<!-- The scene 3 is displayed for a SCENE_SHORT amount of time -->
+		<!--		-->
+			<behavior  timeLimit="&lt;=SCENE_SHORT"> SHOW </behavior>
+			<behavior  timeLimit="&gt;SCENE_SHORT"> HIDE </behavior>			
+		<screenSequence>
+		<!--		-->
+		<!-- The screen 1 displays an information box for a SCREEN_SHORT amount of time -->
+		<!--		-->
+		<sequence  id="screen1">
+			<type>
+			<informationBox> InformationBox1 </informationBox>			
+			      <behavior timeLimit="&lt;=SCREEN_SHORT"> 
+				<transition>
+					<type> FADEIN </type>
+					<time> QUICK </time>
+				</transition>
+				<action> SHOW </action>
+			      </behavior>
+			      <behavior timeLimit="&gt;SCREEN_SHORT"> 
+			        <transition>
+					<type> FADEOUT </type>
+					<time> QUICK </time>
+				</transition> 
+			        <action> HIDE </action>
+			      </behavior>
+			</type>
+		</sequence>
+		<!--		-->
+		<!-- The screen 2 displays an information box for a SCREEN_SHORT amount of time -->
+		<!--		-->
+		<sequence id="screen2">
+			<type>
+			<informationBox> InformationBox2 </informationBox>			
+			      <behavior timeLimit="&lt;=SCREEN_SHORT"> 
+				<transition>
+					<type> FADEIN </type>
+					<time> QUICK </time>
+				</transition>
+				<action> SHOW </action>
+			      </behavior>
+			      <behavior timeLimit="&gt;SCREEN_SHORT"> 
+			        <transition>
+					<type> FADEOUT </type>
+					<time> QUICK </time>
+				</transition> 
+			        <action> HIDE </action>
+			      </behavior>
+			</type>
+		</sequence>
+		<!--		-->
+		<!-- The screen 3 displays an information box for a SCREEN_SHORT amount of time -->
+		<!--		-->
+		<sequence id="screen3">
+			<type>
+			<informationBox> InformationBox3 </informationBox>			
+			      <behavior timeLimit="&lt;=SCREEN_SHORT"> 
+				<transition>
+					<type> FADEIN </type>
+					<time> QUICK </time>
+				</transition>
+				<action> SHOW </action>
+			      </behavior>
+			      <behavior timeLimit="&gt;SCREEN_SHORT"> 
+			        <transition>
+					<type> FADEOUT </type>
+					<time> QUICK </time>
+				</transition> 
+			        <action> HIDE </action>
+			      </behavior>
+			</type>
+		</sequence>
+		</screenSequence>
+		</sequence>
+		</sceneSequence>
+		</sequence>
+	<!--		-->
+	<!-- The sequence for act 2 starts here	-->
+	<!--		-->
+		<sequence id="act2">
+			<behavior timeLimit="&lt;=ACT_MEDIUM"> PLAY </behavior>
+			<behavior timeLimit="&gt;ACT_MEDIUM"> STOP </behavior>
+	<!---		-->
+	<!-- The scene sequence for act 2 starts here -->
+	<!--		-->
+		<sceneSequence>
+	<!--		-->
+	<!-- The scene 1 for act 2 starts here -->
+	<!---		-->
+		<sequence id="scene1">
+			<behavior  timeLimit="&lt;=SCENE_MEDIUM"> SHOW </behavior>
+			<behavior  timeLimit="&gt;SCENE_MEDIUM"> HIDE </behavior>	
+			<screenSequence>
+			<!--		-->
+			<!-- The screen 1 displays an information box for a SCREEN_MEDIUM amount of time -->
+			<!--		-->
+			<sequence id="screen1">
+				<type>
+				<informationBox> InformationBox1 </informationBox>			
+				      <behavior timeLimit="&lt;=SCREEN_MEDIUM"> 
+					<transition>
+						<type> FADEIN </type>
+						<time> QUICK </time>
+					</transition>
+					<action> SHOW </action>
+				      </behavior>
+				      <behavior timeLimit="&gt;SCREEN_MEDIUM"> 
+					<transition>
+						<type> FADEOUT </type>
+						<time> QUICK </time>
+					</transition> 
+					<action> HIDE </action>
+				      </behavior>
+				</type>
+			</sequence>
+			<!--		-->
+			<!-- The screen 2 displays an information box for a SCREEN_MEDIUM amount of time -->
+			<!--		-->
+			<sequence id="screen2">
+				<type>
+				      <informationBox> InformationBox2 </informationBox>			
+				      <behavior timeLimit="&lt;=SCREEN_MEDIUM"> 
+					<transition>
+						<type> FADEIN </type>
+						<time> QUICK </time>
+					</transition>
+					<action> SHOW </action>
+				      </behavior>
+				      <behavior timeLimit="&gt;SCREEN_MEDIUM"> 
+					<transition>
+						<type> FADEOUT </type>
+						<time> QUICK </time>
+					</transition> 
+					<action> HIDE </action>
+				      </behavior>
+				</type>
+			</sequence>
+			<!--		-->
+			<!-- The screen 3 displays an information box for a SCREEN_MEDIUM amount of time -->
+			<!--		-->
+			<sequence id="screen3">
+				<type>
+				<informationBox> InformationBox3 </informationBox>			
+				      <behavior timeLimit="&lt;=SCREEN_MEDIUM"> 
+					<transition>
+						<type> FADEIN </type>
+						<time> QUICK </time>
+					</transition>
+					<action> SHOW </action>
+				      </behavior>
+				      <behavior timeLimit="&gt;SCREEN_MEDIUM"> 
+					<transition>
+						<type> FADEOUT </type>
+						<time> QUICK </time>
+					</transition> 
+					<action> HIDE </action>
+				      </behavior>
+				</type>
+			</sequence>
+			</screenSequence>
+			</sequence>
+		<!--		-->
+		<!-- The scene 2 of act 2 starts here -->
+		<!--		-->
+			<sequence id="scene2">
+				<behavior  timeLimit="&lt;=SCENE_MEDIUM"> SHOW </behavior>
+				<behavior  timeLimit="&gt;SCENE_MEDIUM"> HIDE </behavior>
+			<screenSequence>
+		<!--		-->
+		<!-- The screen 1 displays an information box for a SCREEN_MEDIUM amount of time -->
+		<!--		-->
+			<sequence id="screen1">
+				<type>
+				<informationBox> InformationBox1 </informationBox>			
+				      <behavior timeLimit="&lt;=SCREEN_MEDIUM"> 
+					<transition>
+						<type> FADEIN </type>
+						<time> QUICK </time>
+					</transition>
+					<action> SHOW </action>
+				      </behavior>
+				      <behavior timeLimit="&gt;SCREEN_MEDIUM"> 
+					<transition>
+						<type> FADEOUT </type>
+						<time> QUICK </time>
+					</transition> 
+					<action> HIDE </action>
+				      </behavior>
+				</type>
+			</sequence>
+		<!--		-->
+		<!-- The screen 2 displays an information box for a SCREEN_MEDIUM amount of time -->
+		<!--		-->
+			<sequence id="screen2">
+				<type>
+				<informationBox> InformationBox2 </informationBox>			
+				      <behavior timeLimit="&lt;=SCREEN_MEDIUM"> 
+					<transition>
+						<type> FADEIN </type>
+						<time> QUICK </time>
+					</transition>
+					<action> SHOW </action>
+				      </behavior>
+				      <behavior timeLimit="&gt;SCREEN_MEDIUM"> 
+					<transition>
+						<type> FADEOUT </type>
+						<time> QUICK </time>
+					</transition> 
+					<action> HIDE </action>
+				      </behavior>
+				</type>
+			</sequence>
+		<!--		-->
+		<!-- The screen 3 displays an information box for a SCREEN_MEDIUM amount of time -->
+		<!--		-->
+			<sequence id="screen3">
+				<type>
+				<informationBox> InformationBox3 </informationBox>			
+				      <behavior timeLimit="&lt;=SCREEN_MEDIUM"> 
+					<transition>
+						<type> FADEIN </type>
+						<time> QUICK </time>
+					</transition>
+					<action> SHOW </action>
+				      </behavior>
+				      <behavior timeLimit="&gt;SCREEN_MEDIUM"> 
+					<transition>
+						<type> FADEOUT </type>
+						<time> QUICK </time>
+					</transition> 
+					<action> HIDE </action>
+				      </behavior>
+				</type>
+			</sequence>
+			</screenSequence>
+		</sequence>
+		<!--		-->
+		<!-- The scene 3 of act 2 starts here -->
+		<!--		-->
+			<sequence id="scene3">
+				<behavior  timeLimit="&lt;=SCENE_MEDIUM"> SHOW </behavior>
+				<behavior  timeLimit="&gt;SCENE_MEDIUM"> HIDE </behavior>	
+			<screenSequence>
+			<!--		-->
+			<!-- The screen 1 displays an information box for a SCREEN_MEDIUM amount of time -->
+			<!--		-->
+			<sequence id="screen1">
+				<type>
+				<informationBox> InformationBox1 </informationBox>			
+				      <behavior timeLimit="&lt;=SCREEN_MEDIUM"> 
+					<transition>
+						<type> FADEIN </type>
+						<time> QUICK </time>
+					</transition>
+					<action> SHOW </action>
+				      </behavior>
+				      <behavior timeLimit="&gt;SCREEN_MEDIUM"> 
+					<transition>
+						<type> FADEOUT </type>
+						<time> QUICK </time>
+					</transition> 
+					<action> HIDE </action>
+				      </behavior>
+				</type>
+			</sequence>
+			<!--		-->
+			<!-- The screen 2 displays an information box for a SCREEN_MEDIUM amount of time -->
+			<!--		-->
+			<sequence id="screen2">
+				<type>
+				<informationBox> InformationBox2 </informationBox>			
+				      <behavior timeLimit="&lt;=SCREEN_MEDIUM"> 
+					<transition>
+						<type> FADEIN </type>
+						<time> QUICK </time>
+					</transition>
+					<action> SHOW </action>
+				      </behavior>
+				      <behavior timeLimit="&gt;SCREEN_MEDIUM"> 
+					<transition>
+						<type> FADEOUT </type>
+						<time> QUICK </time>
+					</transition> 
+					<action> HIDE </action>
+				      </behavior>
+				</type>
+			</sequence>
+			<!--		-->
+			<!-- The screen 3 displays an information box for a SCREEN_MEDIUM amount of time -->
+			<!--		-->
+			<sequence id="screen3">
+				<type>
+				<informationBox> InformationBox3 </informationBox>			
+				      <behavior timeLimit="&lt;=SCREEN_MEDIUM"> 
+					<transition>
+						<type> FADEIN </type>
+						<time> QUICK </time>
+					</transition>
+					<action> SHOW </action>
+				      </behavior>
+				      <behavior timeLimit="&gt;SCREEN_MEDIUM"> 
+					<transition>
+						<type> FADEOUT </type>
+						<time> QUICK </time>
+					</transition> 
+					<action> HIDE </action>
+				      </behavior>
+				</type>
+			</sequence>
+		</screenSequence>
+		</sequence>
+		</sceneSequence>		
+		</sequence>
+		<!--		-->
+		<!-- The act 3 starts here and plays for LONG amount of time-->
+		<!--		-->
+		<sequence id="act3">
+			<behavior timeLimit="&lt;=ACT_LONG"> PLAY </behavior>
+			<behavior timeLimit="&gt;ACT_LONG"> STOP </behavior>
+		<sceneSequence>
+		<!--		-->
+		<!-- The scene 1 of act 3 starts here -->
+		<!--		-->
+			<sequence id="scene1">
+				<behavior  timeLimit="&lt;=SCENE_LONG"> SHOW </behavior>
+				<behavior  timeLimit="&gt;SCENE_LONG"> HIDE </behavior>	
+			<screenSequence>
+			<!--		-->
+			<!-- The screen 1 displays an information box for a SCREEN_LONG amount of time -->
+			<!--		-->
+			<sequence id="screen1">
+				<type>
+				<informationBox> InformationBox1 </informationBox>			
+				      <behavior timeLimit="&lt;=SCREEN_LONG"> 
+					<transition>
+						<type> FADEIN </type>
+						<time> QUICK </time>
+					</transition>
+					<action> SHOW </action>
+				      </behavior>
+				      <behavior timeLimit="&gt;SCREEN_LONG"> 
+					<transition>
+						<type> FADEOUT </type>
+						<time> QUICK </time>
+					</transition> 
+					<action> HIDE </action>
+				      </behavior>
+				</type>
+			</sequence>
+			<!--		-->
+			<!-- The screen 2 displays an information box for a SCREEN_LONG amount of time -->
+			<!--		-->
+			<sequence id="screen2">
+				<type>
+				<informationBox> InformationBox2 </informationBox>			
+				      <behavior timeLimit="&lt;=SCREEN_LONG"> 
+					<transition>
+						<type> FADEIN </type>
+						<time> QUICK </time>
+					</transition>
+					<action> SHOW </action>
+				      </behavior>
+				      <behavior timeLimit="&gt;SCREEN_LONG"> 
+					<transition>
+						<type> FADEOUT </type>
+						<time> QUICK </time>
+					</transition> 
+					<action> HIDE </action>
+				      </behavior>
+				</type>
+			</sequence>
+			<!--		-->
+			<!-- The screen 3 displays an information box for a SCREEN_LONG amount of time -->
+			<!--		-->
+			<sequence id="screen3">
+				<type>
+				<informationBox> InformationBox3 </informationBox>			
+				      <behavior timeLimit="&lt;=SCREEN_LONG"> 
+					<transition>
+						<type> FADEIN </type>
+						<time> QUICK </time>
+					</transition>
+					<action> SHOW </action>
+				      </behavior>
+				      <behavior timeLimit="&gt;SCREEN_LONG"> 
+					<transition>
+						<type> FADEOUT </type>
+						<time> QUICK </time>
+					</transition> 
+					<action> HIDE </action>
+				      </behavior>
+				</type>
+			</sequence>
+			</screenSequence>
+			</sequence>
+		<!--		-->
+		<!-- The scene 2 of act 3 starts here -->
+		<!--		-->
+			<sequence id="scene2">
+				<behavior  timeLimit="&lt;=SCENE_LONG"> SHOW </behavior>
+				<behavior  timeLimit="&gt;SCENE_LONG"> HIDE </behavior>	
+			<screenSequence>
+		<!--		-->
+		<!-- The screen 1 displays an information box for a SCREEN_LONG amount of time -->
+		<!--		-->		
+			<sequence id="screen1">
+				<type>
+				<informationBox> InformationBox1 </informationBox>			
+				      <behavior timeLimit="&lt;=SCREEN_LONG"> 
+					<transition>
+						<type> FADEIN </type>
+						<time> QUICK </time>
+					</transition>
+					<action> SHOW </action>
+				      </behavior>
+				      <behavior timeLimit="&gt;SCREEN_LONG"> 
+					<transition>
+						<type> FADEOUT </type>
+						<time> QUICK </time>
+					</transition> 
+					<action> HIDE </action>
+				      </behavior>
+				</type>
+			</sequence>
+		<!--		-->
+		<!-- The screen 2 displays an information box for a SCREEN_LONG amount of time -->
+		<!--		-->
+			<sequence id="screen2">
+				<type>
+				<informationBox> InformationBox2 </informationBox>			
+				      <behavior timeLimit="&lt;=SCREEN_LONG"> 
+					<transition>
+						<type> FADEIN </type>
+						<time> QUICK </time>
+					</transition>
+					<action> SHOW </action>
+				      </behavior>
+				      <behavior timeLimit="&gt;SCREEN_LONG"> 
+					<transition>
+						<type> FADEOUT </type>
+						<time> QUICK </time>
+					</transition> 
+					<action> HIDE </action>
+				      </behavior>
+				</type>
+			</sequence>
+		<!--		-->
+		<!-- The screen 3 displays an information box for a SCREEN_LONG amount of time -->
+		<!--		-->
+			<sequence id="screen3">
+				<type>
+				<informationBox> InformationBox3 </informationBox>			
+				      <behavior timeLimit="&lt;=SCREEN_LONG"> 
+					<transition>
+						<type> FADEIN </type>
+						<time> QUICK </time>
+					</transition>
+					<action> SHOW </action>
+				      </behavior>
+				      <behavior timeLimit="&gt;SCREEN_LONG"> 
+					<transition>
+						<type> FADEOUT </type>
+						<time> QUICK </time>
+					</transition> 
+					<action> HIDE </action>
+				      </behavior>
+				</type>
+			</sequence>
+		</screenSequence>
+		</sequence>
+		<!--		-->
+		<!-- The scene 3 of act 3 starts here -->
+		<!--		-->
+		<sequence id="scene3">
+				<behavior  timeLimit="&lt;=SCENE_LONG"> SHOW </behavior>
+				<behavior  timeLimit="&gt;SCENE_LONG"> HIDE </behavior>			
+		<screenSequence>
+		<!--		-->
+		<!-- The screen 1 displays an information box for a SCREEN_LONG amount of time -->
+		<!--		-->
+		<sequence id="screen1">
+			<type>
+			<informationBox> InformationBox1 </informationBox>			
+			      <behavior timeLimit="&lt;=SCREEN_LONG"> 
+				<transition>
+					<type> FADEIN </type>
+					<time> QUICK </time>
+				</transition>
+				<action> SHOW </action>
+			      </behavior>
+			      <behavior timeLimit="&gt;SCREEN_LONG"> 
+			        <transition>
+					<type> FADEOUT </type>
+					<time> QUICK </time>
+				</transition> 
+			        <action> HIDE </action>
+			      </behavior>
+			</type>
+		</sequence>
+		<!--		-->
+		<!-- The screen 2 displays an information box for a SCREEN_LONG amount of time -->
+		<!--		-->
+		<sequence id="screen2">
+			<type>
+			<informationBox> InformationBox2 </informationBox>			
+			      <behavior timeLimit="&lt;=SCREEN_LONG"> 
+				<transition>
+					<type> FADEIN </type>
+					<time> QUICK </time>
+				</transition>
+				<action> SHOW </action>
+			      </behavior>
+			      <behavior timeLimit="&gt;SCREEN_LONG"> 
+			        <transition>
+					<type> FADEOUT </type>
+					<time> QUICK </time>
+				</transition> 
+			        <action> HIDE </action>
+			      </behavior>
+			</type>
+		</sequence>
+		<!--		-->
+		<!-- The screen 3 displays an information box for a SCREEN_LONG amount of time -->
+		<!--		-->
+		<sequence id="screen3">
+			<type>
+			<informationBox> InformationBox3 </informationBox>			
+			      <behavior timeLimit="&lt;=SCREEN_LONG"> 
+				<transition>
+					<type> FADEIN </type>
+					<time> QUICK </time>
+				</transition>
+				<action> SHOW </action>
+			      </behavior>
+		<!--		-->
+		<!-- The event 'End Game' is added as an attribute to screen3 of scene3 in act3 as it is the last screen that is displayed and the game automatically ends here -->
+		<!--		-->
+			      <behavior timeLimit="&gt;SCREEN_LONG" event="ENDGAME"> 
+			        <transition>
+					<type> FADEOUT </type>
+					<time> QUICK </time>
+				</transition> 
+			        <action> HIDE </action>
+			      </behavior>
+			</type>
+		</sequence>
+		</screenSequence>
+		</sequence>
+		</sceneSequence>		
+		</sequence>
+	</actSequence>	
+	<!-- 		-->
+	<!-- The screen sequence starts here -->
+	<!-- Each screen displays an Information box of specific color and for a specific time depending on the act that the screen belongs to -->
+	<!-- 		-->
+	</gameElement>
+	</gameBehavior>
+	<!--        -->
+	<!--        -->
+	<!-- The static structure of the game starts here -->
+	<!--        -->
+	<!--        -->
+	<actStructure>
+		
+			<id> act1 </id>
+		<!--     	-->
+		<!-- The scenes below are identified by 'act1' and display their respective backdrops -->
+		<!--     	-->
+		<!-- Act1 has three scenes and are identified as Scene1, Scene2 and Scene3 -->
+		<!--		-->
+		<sceneStructure>
+			
+				<id> scene1 </id>
+			<Backdrop>
+			<!--		-->
+			<!-- White backdrop is presented -->
+			<!--		-->
+				<name>White.png</name>
+			</Backdrop>
+			<!--		-->
+			<!-- The screens below present their respective information boxes that have a specific color and are displayed for a specific time depending on the act they belong to -->
+			<!--		-->
+			<screenStructure>
+			<!--		-->
+			<!-- The below game elements represent the Screen1, Screen2 and Screen3 of Scene1 in Act1 -->
+			<!--		-->
+			<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xsi:type="prop">
+				<type>
+				<typeName>InformationBox1</typeName>
+				</type>
+				<id> Screen1 </id>
+				<name>LightBlue.png</name>
+				<color>YELLOW</color>
+				<location>UC</location>
+				<size>MEDIUM</size>
+			</gameElement>
+			</screenStructure>
+			<screenStructure>
+			<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xsi:type="prop">
+				<type>
+				<typeName>InformationBox2</typeName>
+				</type>
+				<id> Screen2 </id>
+				<color>WHITE</color>
+				<location>UC</location>
+				<size>MEDIUM</size>
+			</gameElement>
+			</screenStructure>
+			<screenStructure>
+			<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xsi:type="prop">
+				<type><typeName>InformationBox3</typeName></type>
+				<id> Screen3 </id>
+				<color>BLUE</color>
+				<location>UC</location>
+				<size>MEDIUM</size>
+			</gameElement>
+		</screenStructure>
+		</sceneStructure>
+		<!--		-->
+		<!--		-->
+		<sceneStructure>
+				<id> scene2 </id>
+
+		<Backdrop>
+			<!--		-->
+			<!-- MEDIUM Grey backdrop is presented -->
+			<!--		-->
+			<name>MediumGrey.png</name>
+		</Backdrop>
+			<screenStructure>
+			<!--		-->
+			<!-- The below game elements represent the Screen1, Screen2 and Screen3 of Scene2 in Act1 -->		
+			<!--		-->			
+				<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xsi:type="prop">
+					<type><typeName>InformationBox1</typeName></type>
+					<id> Screen1 </id>
+					<color>YELLOW</color>
+					<location>UC</location>
+					<size>MEDIUM</size>
+					</gameElement>
+					</screenStructure>
+					<screenStructure>
+				<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xsi:type="prop">
+					<type><typeName>InformationBox2</typeName></type>
+					<id> Screen2 </id>
+					<color>WHITE</color>
+					<location>UC</location>
+					<size>MEDIUM</size>
+				</gameElement>
+				</screenStructure>
+				<screenStructure>
+				<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xsi:type="prop">
+				<type><typeName>InformationBox3</typeName></type>
+				<id> Screen3 </id>
+				<color>BLUE</color>
+				<location>UC</location>
+				<size>MEDIUM</size>
+				</gameElement>
+		</screenStructure>
+	</sceneStructure>
+		<sceneStructure>
+			<id> scene3 </id>
+
+		<Backdrop>
+		<!--		-->
+		<!-- Black Backdrop is presented -->
+		<!--		-->
+			<name>Black.png</name>
+		</Backdrop>
+		<screenStructure>
+	<!--		-->	
+	<!-- The below game elements represent the Screen1, Screen2 and Screen3 of Scene3 in Act1 -->
+	<!--		-->
+		<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:type="prop">
+			<type><typeName>InformationBox1</typeName></type>
+			<id> Screen1 </id>
+			<color>YELLOW</color>
+			<location>UC</location>
+			<size>MEDIUM</size>
+		</gameElement>
+		</screenStructure>
+		<screenStructure>
+		<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:type="prop">
+			<type><typeName>InformationBox2</typeName></type>
+			<id> Screen2 </id>
+			<color>WHITE</color>
+			<location>UC</location>
+			<size>MEDIUM</size>
+		</gameElement>
+		</screenStructure>
+		<screenStructure>
+		<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:type="PROP">
+			<type><typeName>InformationBox3</typeName></type>
+			<id> Screen3 </id>
+			<color>BLUE</color>
+			<location>UC</location>
+			<size>MEDIUM</size>
+		</gameElement>
+	</screenStructure>
+	
+	</sceneStructure>
+	</actStructure>
+	
+		<actStructure>
+			<id> act2 </id>
+		<sceneStructure>
+			<!--    	-->
+			<!-- The scenes below are identified by 'act2' and display their respective backdrops -->
+			<!--     	-->
+			<!-- Act2 has three scenes and are identified as Scene1, Scene2 and Scene3 -->
+			<!--		-->
+			
+				
+				<id> scene1 </id>
+
+			<Backdrop>
+			<!--		-->
+			<!-- White backdrop is presented -->				
+			<!--		-->
+				<name>White.png</name>
+			</Backdrop>
+			<screenStructure>
+			<!--		-->
+			<!-- The below game elements represent the Screen1, Screen2 and Screen3 of Scene1 in Act2 -->
+			<!--		-->
+			<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+					xsi:type="prop"> 
+					<type><typeName>InformationBox1</typeName></type>
+					<id> Screen1 </id>
+					<color>YELLOW</color>
+					<location>UC</location>
+					<size>MEDIUM</size>
+			</gameElement>
+			</screenStructure>
+			<screenStructure>
+			<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+					xsi:type="prop">
+					<type><typeName>InformationBox2</typeName></type>
+					<id> Screen2 </id>
+					<color>WHITE</color>
+					<location>UC</location>
+					<size>MEDIUM</size>
+			</gameElement>
+			</screenStructure>
+			<screenStructure>
+			<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xsi:type="prop">
+					<type><typeName>InformationBox3</typeName></type>
+					<id> Screen3 </id>
+					<color>BLUE</color>
+					<location>UC</location>
+					<size>MEDIUM</size>
+			</gameElement>
+			</screenStructure>
+			</sceneStructure>	
+			<sceneStructure>
+				<id> scene2 </id>
+			<Backdrop>
+			<!--		-->
+			<!-- Light Grey backdrop is presented -->
+			<!--		-->
+				<name>LightGrey.png</name>
+			
+			</Backdrop>	
+			<screenStructure>
+			<!--		-->
+			<!-- The below game elements represent the Screen1, Screen2 and Screen3 of Scene2 in Act2 -->
+			<!--		-->
+			<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xsi:type="prop">
+				<type><typeName>InformationBox1</typeName></type>
+				<id> Screen1 </id>
+				<color>YELLOW</color>
+				<location>UC</location>
+				<size>MEDIUM</size>
+			</gameElement>
+			</screenStructure>
+			<screenStructure>
+			<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xsi:type="prop">
+				<type><typeName>InformationBox2</typeName></type>
+				<id> Screen2 </id>
+				<color>WHITE</color>
+				<location>UC</location>
+				<size>MEDIUM</size>
+			</gameElement>
+			</screenStructure>
+			<screenStructure>
+			<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xsi:type="prop">
+				<type><typeName>InformationBox3</typeName></type>
+				<id> Screen3 </id>
+				<color>BLUE</color>
+				<location>UC</location>
+				<size>MEDIUM</size>
+			</gameElement>
+			</screenStructure>	
+			</sceneStructure>
+			<sceneStructure>
+				<id> scene3 </id>
+			<Backdrop>
+			<!--		-->
+			<!-- Black backdrop is presented -->
+			<!--		-->
+				<name>Black.png</name>
+			</Backdrop>
+			<screenStructure>
+			<!--		-->
+			<!-- The below game elements represent the Screen1, Screen2 and Screen3 of Scene3 in Act2 -->
+			<!--		-->
+				<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+					xsi:type="prop">
+					<type><typeName>InformationBox1</typeName></type>
+					<id> Screen1 </id>
+					<color>YELLOW</color>
+					<location>UC</location>
+					<size>MEDIUM</size>
+				</gameElement>
+				</screenStructure>
+				<screenStructure>
+				<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+					xsi:type="prop">
+					<type><typeName>InformationBox2</typeName></type>
+					<id> Screen2 </id>
+					<color>WHITE</color>
+					<location>UC</location>
+					<size>MEDIUM</size>
+				</gameElement>
+				</screenStructure>
+				<screenStructure>
+				<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+					xsi:type="prop">
+					<type>
+					<typeName>InformationBox3</typeName>
+					</type>
+					<id> Screen3 </id>
+					<color>BLUE</color>
+					<location>UC</location>
+					<size>MEDIUM</size>
+				</gameElement>
+			</screenStructure>
+		
+		</sceneStructure>
+		</actStructure>
+		<actStructure>
+			<id> act3 </id>
+		<sceneStructure>
+			<!--     -->
+			<!-- The scenes below belong to 'act3' and display their respective backdrops -->
+			
+				<id> scene1 </id>
+			<!--     -->
+			<!-- Act3 has three scenes and are identified as Scene1, Scene2 and Scene3 -->
+			<Backdrop>
+			<!-- White backdrop is presented -->
+				<name>White.png</name>
+			</Backdrop>
+			<screenStructure>
+		 	<!-- The below game elements represent the Screen1, Screen2 and Screen3 of Scene1 in Act3 -->
+			<!--	-->
+			<!-- 	-->
+				<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+					xsi:type="prop">
+					<type><typeName>InformationBox1</typeName></type>
+					<id> Screen1 </id>
+					<color>YELLOW</color>
+					<location>UC</location>
+					<size>MEDIUM</size>
+				</gameElement>
+				</screenStructure>
+				<screenStructure>
+				<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+					xsi:type="prop">
+					<type><typeName>InformationBox2</typeName></type>
+					<id> Screen2 </id>
+					<color>WHITE</color>
+					<location>UC</location>
+					<size>MEDIUM</size>
+				</gameElement>
+				</screenStructure>
+				<screenStructure>
+				<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+					xsi:type="prop">
+					<type><typeName>InformationBox3</typeName></type>
+					<id> Screen3 </id>
+					<color>WHITE</color>
+					<location>UC</location>
+					<size>MEDIUM</size>
+				</gameElement>
+			</screenStructure>
+			</sceneStructure>
+			<sceneStructure>
+				<id> scene2 </id>
+			
+			<Backdrop>
+			<!-- Dark Grey backdrop is presented -->
+				<name>DarkGrey.png</name>
+			</Backdrop>
+			<screenStructure>
+			<!--		-->
+			<!-- The below game elements represent the Screen1, Screen2 and Screen3 of Scene3 in Act3 -->
+			<!--		-->
+				<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+					xsi:type="prop">
+					<type><typeName>InformationBox1</typeName></type>
+					<id> Screen1 </id>
+					<color>YELLOW</color>
+					<location>UC</location>
+					<size>MEDIUM</size>
+				</gameElement>
+				</screenStructure>
+				<screenStructure>
+				<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+					xsi:type="prop">
+					<type><typeName>InformationBox2</typeName></type>
+					<id> Screen2 </id>
+					<color>WHITE</color>
+					<location>UC</location>
+					<size>MEDIUM</size>
+				</gameElement>
+				</screenStructure>
+				<screenStructure>
+				<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+					xsi:type="prop">
+					<type><typeName>InformationBox3</typeName></type>
+					<id> Screen3 </id>
+					<color>BLUE</color>
+					<location>UC</location>
+					<size>MEDIUM</size>
+				</gameElement>
+			</screenStructure>
+			</sceneStructure>		
+			<sceneStructure>
+				<id> scene3 </id>
+			<Backdrop>
+			<!-- Black backdrop is presented -->
+				<name>Black.png</name>
+			</Backdrop>
+			<screenStructure>
+			<!--		-->
+			<!-- The below game elements represent the Screen1, Screen2 and Screen3 of Scene3 in Act3 -->
+			<!--		-->
+				<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+					xsi:type="prop">
+					<type><typeName>InformationBox1</typeName></type>
+					<id> Screen1 </id>
+					<color>YELLOW</color>
+					<location>UC</location>
+					<size>MEDIUM</size>typeName
+				</gameElement>
+				</screenStructure>
+				<screenStructure>
+				<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+					xsi:type="prop">
+					<type><typeName>InformationBox2</typeName></type>
+					<id> Screen2 </id>
+					<color>WHITE</color>
+					<location>UC</location>
+					<size>MEDIUM</size>
+				</gameElement>
+				</screenStructure>
+				<screenStructure>
+				<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+					xsi:type="prop">
+					<type><typeName>InformationBox3</typeName></type>
+					<id> Screen3 </id>
+					<color>BLUE</color>
+					<location>UC</location>
+					<size>MEDIUM</size>
+				</gameElement>
+			</screenStructure>		
+		
+		</sceneStructure>
+		
+		</actStructure>
+</game>
