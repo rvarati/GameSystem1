@@ -54,11 +54,11 @@ public class GamePlayEngine {
 		GameModelBoundary gameModelBoundary=gameController.getModelBoundary();
 		gameModelBoundary.setView(gameView);		
 		//start the game by calling modelboundary
-		//gameModelBoundary.startGame("./GameXML/TestGame1_Variations/TestGame1.10.xml");
+		//gameModelBoundary.startGame("./GameXML/TestGame1_Variations/BackGround-color-ChangeV1.2.xml");
 		//gameModelBoundary.startGame("./GameXML/TestGame2_Variations/TestGame2_new_1.xml");
 		//gameModelBoundary.startGame("./GameXML/TestGame2_Variations/TestGame2_new_9.xml");
-		//gameModelBoundary.startGame("./GameXML/TestGame4_Variations/TestGame_4_9.xml");
-		gameModelBoundary.startGame("./GameXML/TestGame3_Variations/TestGame3_new_10.xml");
+		gameModelBoundary.startGame("./GameXML/TestGame4_Variations/BG.xml");
+		//gameModelBoundary.startGame("./GameXML/TestGame3_Variations/TestGame3_new_10.xml");
 		//gameModelBoundary.startGame("./GameXML/TestGame5_Variations/TestGame5_new_1.xml");
 		
 		//System.out.println("Points are:" + gameModel.getCharacter().getReward().getPoints());
