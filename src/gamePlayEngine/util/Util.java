@@ -15,9 +15,14 @@ public class Util {
 
 	// Change the string color to Color object.
 	public static Color StringToColor(String col) {
-		Color color = new Color(255, 0, 0);
-		System.out.println("Inside Util!!");
-		System.out.println(col);
+		
+		//Color color = new Color(255, 0, 0);
+		Color c;
+		
+		if(col.equals("LIGHT_RED")) {
+			c = new Color(248, 98, 71);
+		}
+		
 		/*Color color;
 		if((!col.equals("WHITE")) || (!col.equals("YELLOW")) || (!col.equals("BLACK")) || (!col.equals("RED"))
 				|| (!col.equals("GRAY")) || (!col.equals("LIGHT_GRAY")) || (!col.equals("MAGENTA")) || 
@@ -41,11 +46,11 @@ public class Util {
 		Field field;
 		try {
 			field = Color.class.getField(col);
-			color = (Color) field.get(null);
+			c = (Color) field.get(null);
 		} catch (Exception e) {
-			color = new Color(255, 0, 0);
+			c = new Color(255, 0, 0);
 		}
-		return color;
+		return c;
 	}
 
 	public static Dimension panelDimension(Size size) {
