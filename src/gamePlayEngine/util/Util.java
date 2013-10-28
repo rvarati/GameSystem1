@@ -15,35 +15,9 @@ public class Util {
 
 	// Change the string color to Color object.
 	public static Color StringToColor(String col) {
-<<<<<<< HEAD
-		
+	
 		//Color color = new Color(255, 0, 0);
-		Color c;
-		
-		if(col.equals("LIGHT_RED")) {
-			c = new Color(248, 98, 71);
-		}
-		
-		/*Color color;
-		if((!col.equals("WHITE")) || (!col.equals("YELLOW")) || (!col.equals("BLACK")) || (!col.equals("RED"))
-				|| (!col.equals("GRAY")) || (!col.equals("LIGHT_GRAY")) || (!col.equals("MAGENTA")) || 
-				(!col.equals("BLUE")) || (!col.equals("DARK_GRAY")) || (!col.equals("ORANGE")) || 
-				(!col.equals("PINK")) || (!col.equals("GREEN")) || (!col.equals("CYAN"))) {
-		  color = new Color (54, 201, 198);  //creates your new color 
-		  System.out.println("Creating new color");
-		}
-		else {
-			System.out.println("the strings do not match");		
-			 color = new Color(255, 0, 0);
-			 Field field;
-				try {
-					field = Color.class.getField(col);
-					color = (Color) field.get(null);
-				} catch (Exception e) {
-					color = new Color(255, 0, 0);
-				}
-		}*/
-=======
+	
 		//Color c=new Color(255,0,0);
 		Color c=null;
 		 if(col.equals("LIGHT_YELLOW")) {
@@ -72,20 +46,8 @@ public class Util {
 		 
 		System.out.println("Inside Util!!");
 		System.out.println(col);
->>>>>>> df33f231c94ed6e59856240604a49e276301f922
-		
-		
-	/*Field field;
-		try {
-			field = Color.class.getField(col);
-			c = (Color) field.get(null);
-		} catch (Exception e) {
-			c = new Color(255, 0, 0);
-		}
-<<<<<<< HEAD
-		return c;
-=======
-		return c; */
+
+
 		/*Field field;
 		Color clr;
         try {
@@ -96,8 +58,7 @@ public class Util {
                 clr = new Color(255, 0, 0);
         }*/
         return c;
->>>>>>> df33f231c94ed6e59856240604a49e276301f922
-	}
+}
 
 	public static Dimension panelDimension(Size size) {
 		Dimension dimension = new Dimension();
