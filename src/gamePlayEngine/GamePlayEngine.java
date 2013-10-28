@@ -43,6 +43,7 @@ public class GamePlayEngine {
 		}*/
 		
 		//Testing Isaac
+		//Testing RIthika
 		// Create the model
 		// GameModel gameModel = GameModel.load("./GameXML/TestGame1.xml");
 		//declare Model
