@@ -18,29 +18,46 @@ public class Util {
 		//Color c=new Color(255,0,0);
 		Color c=null;
 		 if(col.equals("LIGHT_YELLOW")) {
-			 System.out.println("Inside Light_yellow");
-             c = new Color(255, 255, 128);
+			 c = new Color(255, 255, 128);
+		 }
+		 if(col.equals("LIGHT_BLUE")) {
+			 c = new Color(32,143, 255);
+		 }
+		 if(col.equals("LIGHT_TURQUOISE")) {
+			 c = new Color(126, 211, 188);
+		 }
+		 if(col.equals("LIGHT_PURPLE")) {
+			 c = new Color(210, 166, 255);
 		 }
 		 if(col.equals("RED") ||col.equals("WHITE") || col.equals("YELLOW") || col.equals("BLACK") || 
 				 col.equals("GRAY") || col.equals("LIGHT_GRAY") || col.equals("MAGENTA") || 
 				 col.equals("BLUE") || col.equals("DARK_GRAY") || col.equals("ORANGE") || 
 				 col.equals("PINK") || col.equals("GREEN") || col.equals("CYAN")) 
 		 {
-			 System.out.println("Inside yellow");
-             c = new Color(255, 0, 0);
-             Field field;
-		try {
-			field = Color.class.getField(col);
-			c = (Color) field.get(null);
-		} catch (Exception e) {
-			c = new Color(255, 0, 0);
+			 c = new Color(255, 0, 0);
+             	Field field;
+             		try {
+             				field = Color.class.getField(col);
+             				c = (Color) field.get(null);
+             		} catch (Exception e) {
+             			c = new Color(255, 0, 0);
+             		}
 		}
-			 }
-		 if(col.equals("DARK_YELLOW")) {
-			 System.out.println("Inside Dark_yellow");
-             c = new Color(244, 227, 11);
+		 if(col.equals("TURQUOISE")) {
+			 c = new Color(62, 181, 148);
 		 }
-		 
+		 if(col.equals("DARK_YELLOW")) {
+			 c = new Color(244, 227, 11);
+		 }
+		 if(col.equals("DARK_BLUE")) {
+			c = new Color(0,0,160);
+		 }
+		 if(col.equals("DARK_TURQUOISE")) {
+				c = new Color(37, 109, 89);
+		}
+		 if(col.equals("DARK_PURPLE")) {
+				c = new Color(91,0,183);
+		 }
 		System.out.println("Inside Util!!");
 		System.out.println(col);
 		

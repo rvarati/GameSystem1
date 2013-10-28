@@ -91,7 +91,7 @@
 						<time>LONG</time>
 				</event>
 				</type>	
-				<color>LIGHT_RED</color>
+				<color>LIGHT_BLUE</color>
 				<location>DLC</location>
 				<size>LARGE</size>				
 				<textSize>12</textSize>
@@ -114,7 +114,7 @@
 					<action>NONE</action>
 				</event>
 				</type>
-				<color>RED</color>
+				<color>BLUE</color>
 				<location>UUC</location>
 				<size>MEDIUM</size>				
 				<textSize>12</textSize>
@@ -137,7 +137,7 @@
 					<action>NONE</action>
 				</event>
 				</type>
-				<color>DARK_RED</color>
+				<color>DARK_BLUE</color>
 				<location>C</location>
 				<size>LARGE</size>				
 				<textSize>12</textSize>
