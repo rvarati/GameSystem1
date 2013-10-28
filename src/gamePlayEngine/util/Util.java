@@ -15,37 +15,54 @@ public class Util {
 
 	// Change the string color to Color object.
 	public static Color StringToColor(String col) {
-		Color color = new Color(255, 0, 0);
-		System.out.println("Inside Util!!");
-		System.out.println(col);
-		/*Color color;
-		if((!col.equals("WHITE")) || (!col.equals("YELLOW")) || (!col.equals("BLACK")) || (!col.equals("RED"))
-				|| (!col.equals("GRAY")) || (!col.equals("LIGHT_GRAY")) || (!col.equals("MAGENTA")) || 
-				(!col.equals("BLUE")) || (!col.equals("DARK_GRAY")) || (!col.equals("ORANGE")) || 
-				(!col.equals("PINK")) || (!col.equals("GREEN")) || (!col.equals("CYAN"))) {
-		  color = new Color (54, 201, 198);  //creates your new color 
-		  System.out.println("Creating new color");
-		}
-		else {
-			System.out.println("the strings do not match");		
-			 color = new Color(255, 0, 0);
-			 Field field;
-				try {
-					field = Color.class.getField(col);
-					color = (Color) field.get(null);
-				} catch (Exception e) {
-					color = new Color(255, 0, 0);
-				}
-		}*/
-		
-		Field field;
+		//Color c=new Color(255,0,0);
+		Color c=null;
+		 if(col.equals("LIGHT_YELLOW")) {
+			 System.out.println("Inside Light_yellow");
+             c = new Color(255, 255, 128);
+		 }
+		 if(col.equals("RED") ||col.equals("WHITE") || col.equals("YELLOW") || col.equals("BLACK") || 
+				 col.equals("GRAY") || col.equals("LIGHT_GRAY") || col.equals("MAGENTA") || 
+				 col.equals("BLUE") || col.equals("DARK_GRAY") || col.equals("ORANGE") || 
+				 col.equals("PINK") || col.equals("GREEN") || col.equals("CYAN")) 
+		 {
+			 System.out.println("Inside yellow");
+             c = new Color(255, 0, 0);
+             Field field;
 		try {
 			field = Color.class.getField(col);
-			color = (Color) field.get(null);
+			c = (Color) field.get(null);
 		} catch (Exception e) {
-			color = new Color(255, 0, 0);
+			c = new Color(255, 0, 0);
 		}
-		return color;
+			 }
+		 if(col.equals("DARK_YELLOW")) {
+			 System.out.println("Inside Dark_yellow");
+             c = new Color(244, 227, 11);
+		 }
+		 
+		System.out.println("Inside Util!!");
+		System.out.println(col);
+		
+		
+	/*Field field;
+		try {
+			field = Color.class.getField(col);
+			c = (Color) field.get(null);
+		} catch (Exception e) {
+			c = new Color(255, 0, 0);
+		}
+		return c; */
+		/*Field field;
+		Color clr;
+        try {
+                field = Color.class.getField(col);
+                clr = (Color) field.get();
+        } catch (Exception e) {
+        	System.out.println("Inside Catch");
+                clr = new Color(255, 0, 0);
+        }*/
+        return c;
 	}
 
 	public static Dimension panelDimension(Size size) {

@@ -69,7 +69,7 @@
 		<sceneStructure>
 			
 				<identifier> scene1 </identifier>						
-				<backdrop>BlueSky.png</backdrop>			
+				<backdrop>bkgrnd.png</backdrop>			
 			<!--		-->
 			<!-- The screens below present their respective information boxes that have a specific color and are displayed for a specific time depending on the act they belong to -->
 			<!--		-->
@@ -91,7 +91,7 @@
 						<time>LONG</time>
 				</event>
 				</type>	
-				<color>Hello</color>
+				<color>LIGHT_YELLOW</color>
 				<location>DLC</location>
 				<size>LARGE</size>				
 				<textSize>12</textSize>
@@ -114,7 +114,7 @@
 					<action>NONE</action>
 				</event>
 				</type>
-				<color>RED</color>
+				<color>YELLOW</color>
 				<location>UUC</location>
 				<size>MEDIUM</size>				
 				<textSize>12</textSize>
@@ -137,7 +137,7 @@
 					<action>NONE</action>
 				</event>
 				</type>
-				<color>YELLOW</color>
+				<color>DARK_YELLOW</color>
 				<location>C</location>
 				<size>LARGE</size>				
 				<textSize>12</textSize>
