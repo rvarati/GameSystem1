@@ -16,7 +16,8 @@ public class Util {
 	// Change the string color to Color object.
 	public static Color StringToColor(String col) {
 		Color color = new Color(255, 0, 0);
-		
+		System.out.println("Inside Util!!");
+		System.out.println(col);
 		/*Color color;
 		if((!col.equals("WHITE")) || (!col.equals("YELLOW")) || (!col.equals("BLACK")) || (!col.equals("RED"))
 				|| (!col.equals("GRAY")) || (!col.equals("LIGHT_GRAY")) || (!col.equals("MAGENTA")) || 

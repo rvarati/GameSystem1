@@ -386,8 +386,10 @@ public class GameViewFrame extends javax.swing.JFrame {
 		} else if (prop.getType().getTypeName().equals("Button2")) {
 
 			JButton btn = new JButton(prop.getText());
-			if (prop.getColor() == null)
+			if (prop.getColor() == null){
 				btn.setBackground(new Color(255, 255, 255));
+				System.out.println("Inside GameViewFrame if statement");
+			}
 			else
 				btn.setBackground(Util
 						.StringToColor(prop.getColor().toString()));
@@ -410,8 +412,10 @@ public class GameViewFrame extends javax.swing.JFrame {
 			});
 		}else if(prop.getType().getTypeName().equals("Button3")){
 			JButton btn = new JButton(prop.getText());
-			if (prop.getColor() == null)
+			if (prop.getColor() == null){
 				btn.setBackground(new Color(255, 255, 255));
+				System.out.println("Inside GameViewFrame if statement");
+			}
 			else
 				btn.setBackground(Util
 						.StringToColor(prop.getColor().toString()));
