@@ -42,6 +42,7 @@ public class GamePlayEngine {
 			return;
 		}*/
 		
+		//Testing Isaac
 		// Create the model
 		// GameModel gameModel = GameModel.load("./GameXML/TestGame1.xml");
 		//declare Model
