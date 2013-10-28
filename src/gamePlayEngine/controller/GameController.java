@@ -28,7 +28,7 @@ import gamePlayEngine.view.GameViewBoundary;
  */
 public class GameController implements ActionListener {
 
-	/* Additional Boundary class members are to be added as needed */
+	/*Additional Boundary class members are to be added as needed */
 	private GameModelBoundary gameBoundary;
 	private RewardBoundary rewardBoundary;
 	// adding view class boundary
