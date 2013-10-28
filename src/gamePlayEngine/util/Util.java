@@ -15,9 +15,9 @@ public class Util {
 
 	// Change the string color to Color object.
 	public static Color StringToColor(String col) {
-		//Color color = new Color(255, 0, 0);
+		Color color = new Color(255, 0, 0);
 		
-		Color color;
+		/*Color color;
 		if((!col.equals("WHITE")) || (!col.equals("YELLOW")) || (!col.equals("BLACK")) || (!col.equals("RED"))
 				|| (!col.equals("GRAY")) || (!col.equals("LIGHT_GRAY")) || (!col.equals("MAGENTA")) || 
 				(!col.equals("BLUE")) || (!col.equals("DARK_GRAY")) || (!col.equals("ORANGE")) || 
@@ -35,15 +35,15 @@ public class Util {
 				} catch (Exception e) {
 					color = new Color(255, 0, 0);
 				}
-		}
+		}*/
 		
-		/*Field field;
+		Field field;
 		try {
 			field = Color.class.getField(col);
 			color = (Color) field.get(null);
 		} catch (Exception e) {
 			color = new Color(255, 0, 0);
-		}*/
+		}
 		return color;
 	}
 
