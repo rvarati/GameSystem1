@@ -1,28 +1,12 @@
-/**
-The Game Play Engine has an active MVC (model, view, controller) architecture.
-
-The purpose of this file is to create the model, view and controller components and their interfaces.
- */
+/*The Game Play Engine has an active MVC (model, view, controller) architecture.
+* The purpose of this file is to create the model, view and controller components and their interfaces.
+*/
 
 package gamePlayEngine;
 
-import java.util.List;
-
 import gamePlayEngine.controller.GameController;
-import gamePlayEngine.controller.GameState;
-import gamePlayEngine.controller.MessageType;
-import gamePlayEngine.model.act.Act;
-import gamePlayEngine.model.gameElement.GameElement;
-import gamePlayEngine.model.gameElement.character.GameCharacter;
-import gamePlayEngine.model.gameElement.graphic.Backdrop;
-import gamePlayEngine.model.gameElement.graphic.Event;
-import gamePlayEngine.model.gameElement.graphic.Prop;
-import gamePlayEngine.model.gameElement.graphic.Type;
-import gamePlayEngine.model.gameElement.player.reward.Reward;
 import gamePlayEngine.model.gamemodel.GameModel;
 import gamePlayEngine.model.gamemodel.GameModelBoundary;
-import gamePlayEngine.model.scene.Scene;
-import gamePlayEngine.model.screen.Screen;
 import gamePlayEngine.view.GameView;
 
 /**
@@ -36,17 +20,6 @@ public class GamePlayEngine {
 	 * @throws Exception
 	 */
 	public static void main(String[] args) throws Exception {
-
-		/*if(args.length != 1) {
-			System.out.println("Please specify the game xml file");
-			return;
-		}*/
-		
-		//Testing Isaac
-		//Testing RIthika
-		// Create the model
-		// GameModel gameModel = GameModel.load("./GameXML/TestGame1.xml");
-		//declare Model
 		GameModel gameModel=new GameModel();
 		//create view
 		GameView gameView=new GameView();
@@ -125,18 +98,6 @@ public class GamePlayEngine {
 					}
 				}*/
 				
-				//this is test code and please delete it after tsting
-	
-		// Create the View
-		/*GameView view = new GameView();
-
-        view.sendPonits(gameModel.getCharacter().getReward().getPoints());
-		// Create the Controller
-		GameController gameController = new GameController(gameModel, view);
-
-     		// Tell the view the controller that will respond to user input.
-		view.setController(gameController);
-
-		view.showStartView();*/
+				//this is test code and please delete it after tsting	
 	}
 }

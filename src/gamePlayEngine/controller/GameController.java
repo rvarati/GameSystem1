@@ -1,15 +1,13 @@
 /**
- *  Controller for Game Play Engine. Receives messages from View and sends to appropriate model boundary for update.
- *  This file contains the Controller class for the Game Play Engine
- */
+*Controller for Game Play Engine. Receives messages from View and sends to appropriate model boundary for update.
+*This file contains the Controller class for the Game Play Engine
+*/
 package gamePlayEngine.controller;
 
-import java.awt.DisplayMode;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
 import java.util.Observable;
-import java.util.Observer;
 
 import gamePlayEngine.model.act.Act;
 import gamePlayEngine.model.gameElement.GameElement;
@@ -23,7 +21,6 @@ import gamePlayEngine.view.GameView;
 import gamePlayEngine.view.GameViewBoundary;
 
 /**
- * hi this is thyag
  * Controller class for Game Play Engine
  */
 public class GameController implements ActionListener {
@@ -112,7 +109,7 @@ public class GameController implements ActionListener {
 		return gameViewBoundary;
 	}
 
-	@Override
+	//@Override
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
 
@@ -308,14 +305,12 @@ public class GameController implements ActionListener {
 					break;
 				}
 			}
-			if (flag)
+			if (flag) {
 				break;
+			}
 		}
 		if (resultScreen != null) {
-
-			// System.out.print(resultScreen.getGameElements().get(0).getGameElementIdentifier().getId());
-			System.out.println("Result Screen is"
-					+ resultScreen.getGameElements().size());
+			System.out.println("Result Screen is" + resultScreen.getGameElements().size());
 			screenToStart = resultScreen;
 			currentGameElement = 0;
 			resultScreen.screenStart(gameState);
@@ -401,10 +396,7 @@ public class GameController implements ActionListener {
 				}
 			} else {
 				System.out.println("Need to start sequencing");
-			}
-			
-			// TODO if next tag is not present do sequencing.
-			//setVisible(false);
+			}	
 		}
 	}
 	
@@ -413,8 +405,7 @@ public class GameController implements ActionListener {
 		Message message = gameState.getMessage();
 		if (GameModel.class.isInstance(observable)) {
 			if (message == Message.StartComplete) {
-				System.out
-						.println("Controller :GameModelStartComplete message is received");
+				System.out.println("Controller :GameModelStartComplete message is received");
 				GameModel gameModel = (GameModel) observable;
 				try {
 					gameModel.gameModelPlay(gameState);
@@ -429,10 +420,8 @@ public class GameController implements ActionListener {
 		if (Act.class.isInstance(observable)) {
 
 			if (message == Message.StartComplete) {
-				System.out
-						.println("Controller :ActStartComplete message is received");
+				System.out.println("Controller :ActStartComplete message is received");
 				actToPlay(gameState);
-
 			}
 
 			if (message == Message.PlayComplete) {
@@ -444,13 +433,13 @@ public class GameController implements ActionListener {
 
 			}
 			if (message == Message.EndComplete) {
-				System.out
-						.println("Controller :ActEndComplete message is received");
+				System.out.println("Controller :ActEndComplete message is received");
 				// Check if anymore acts left to start. If yes. Play those
 				// acts.
 				// otherwise print message "Acts are over".
-				if (!actToStart(gameState))
+				if (!actToStart(gameState)) {
 					System.out.println("All acts are over");
+				}
 
 			}
 
@@ -459,31 +448,22 @@ public class GameController implements ActionListener {
 		if (Scene.class.isInstance(observable)) {
 
 			if (message == Message.StartComplete) {
-				System.out
-						.println("Controller :SceneStartComplete message is received");
+				System.out.print("Controller :SceneStartComplete message is received");
 				sceneToPlay(gameState);
 			}
 			if (message == Message.PlayComplete) {
-				System.out
-						.println("Controller :ScenePlayComplete message is received");
+				System.out.println("Controller :ScenePlayComplete message is received");
 				screenToStart(gameState);
-				// System.out.println("Screens are over");
-
 			}
 			if (message == Message.EndComplete) {
-				System.out
-						.println("Controller :SceneEndComplete message is received");
-				// Check if anymore scenes left to start. If yes. Play those
-				// scenes.
-				// otherwise end the act.
-				/*
-				 * if (!isSceneStart()) actToEnd(); else sceneToStart();
-				 */
-
-				if (isSceneStart())
+				System.out.println("Controller :SceneEndComplete message is received");
+								
+				if (isSceneStart()) {
 					sceneToStart(gameState);
-				else
+				}
+				else {
 					actToEnd(gameState);
+				}
 
 			}
 
@@ -532,8 +512,7 @@ public class GameController implements ActionListener {
 			}
 
 			if (message == Message.EndComplete) {
-				System.out
-						.println("Controller :GameElementEndComplete message is received");
+				System.out.println("Controller :GameElementEndComplete message is received");
 
 				// 1. To check whether there are any new gameElements to start.
 				// If there is any, start that new game element.
@@ -550,34 +529,5 @@ public class GameController implements ActionListener {
 				}
 			}
 		}
-
-		/*
-		 * if (Prop.class.isInstance(observable)) {
-		 * 
-		 * if (message == Message.StartComplete) { System.out
-		 * .println("Controller :GameElementStartComplete message is received");
-		 * propToPlay(gameState);
-		 * 
-		 * }
-		 * 
-		 * if (message == Message.PlayComplete) { System.out
-		 * .println("Controller :GameElementPlayComplete message is received");
-		 * propToEnd(gameState); }
-		 * 
-		 * if (message == Message.EndComplete) { System.out
-		 * .println("Controller :GameElementEndComplete message is received");
-		 * 
-		 * // To check whether there are any new gameElements to start. // If
-		 * there is any, start that new game element. // Otherwise End the
-		 * current screen.
-		 * 
-		 * if (!propToStart(gameState)) {
-		 * System.out.println("No more game elements to start");
-		 * gameElementToEnd(gameState); }
-		 * 
-		 * }
-		 */
-
 	}
-
 }
