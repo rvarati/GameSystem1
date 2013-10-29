@@ -91,11 +91,7 @@
 						<time>LONG</time>
 				</event>
 				</type>	
-<<<<<<< HEAD
-				<color>LIGHT_YELLOW</color>
-=======
-				<color>LIGHT_RED</color>
->>>>>>> 86db0aaa9f19f5cbbef84ff1cd6cb8df6cf8d9c2
+				<color>LIGHT_BLUE</color>
 				<location>DLC</location>
 				<size>LARGE</size>				
 				<textSize>12</textSize>
@@ -118,7 +114,7 @@
 					<action>NONE</action>
 				</event>
 				</type>
-				<color>YELLOW</color>
+				<color>BLUE</color>
 				<location>UUC</location>
 				<size>MEDIUM</size>				
 				<textSize>12</textSize>
@@ -141,11 +137,7 @@
 					<action>NONE</action>
 				</event>
 				</type>
-<<<<<<< HEAD
-				<color>DARK_YELLOW</color>
-=======
-				<color>DARK_RED</color>
->>>>>>> 86db0aaa9f19f5cbbef84ff1cd6cb8df6cf8d9c2
+				<color>DARK_BLUE</color>
 				<location>C</location>
 				<size>LARGE</size>				
 				<textSize>12</textSize>
