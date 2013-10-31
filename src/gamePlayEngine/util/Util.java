@@ -149,7 +149,7 @@ public class Util {
 			jPanel.setOpaque(true);
 			break;
 		case UUC:
-			jPanel.setBounds(400, 0, 200, 160);
+			jPanel.setBounds(370, 0, 200, 160);
 			jPanel.setOpaque(true);
 			break;
 		case UULC:
@@ -214,7 +214,7 @@ public class Util {
 			jPanel.setOpaque(true);
 			break;
 		case DLC:
-			jPanel.setBounds(600, 480, 200, 160);
+			jPanel.setBounds(500, 370, 200, 160);
 			jPanel.setOpaque(true);
 			break;
 		case DL:
