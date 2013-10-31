@@ -19,7 +19,7 @@ public class GamePlayEngine {
 	 * @param args
 	 * @throws Exception
 	 */
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws Exception  {
 		GameModel gameModel=new GameModel();
 		//create view
 		//Testing Isaac updates 
