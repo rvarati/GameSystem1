@@ -19,9 +19,10 @@ public class GamePlayEngine {
 	 * @param args
 	 * @throws Exception
 	 */
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws Exception  {
 		GameModel gameModel=new GameModel();
 		//create view
+		//Testing Isaac updates 
 		GameView gameView=new GameView();
 		//create Game controller and inform it about view and model
 		GameController gameController=new GameController(gameModel,gameView);
