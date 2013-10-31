@@ -269,7 +269,7 @@ public class RoundedPanel extends JPanel implements TimingTarget{
    }*/
 
 
-	@Override
+	//@Override
 	public void begin() {
 		// TODO Auto-generated method stub
 		
@@ -277,7 +277,7 @@ public class RoundedPanel extends JPanel implements TimingTarget{
 
 
 
-	@Override
+//	@Override
 	public void end() {
 		// TODO Auto-generated method stub
 		
@@ -285,7 +285,7 @@ public class RoundedPanel extends JPanel implements TimingTarget{
 
 
 
-	@Override
+	//@Override
 	public void repeat() {
 		// TODO Auto-generated method stub
 		
@@ -293,7 +293,7 @@ public class RoundedPanel extends JPanel implements TimingTarget{
 
 
 
-	@Override
+	//@Override
 	public void timingEvent(float fraction) {
 		// TODO Auto-generated method stub
 		alpha = fraction;        

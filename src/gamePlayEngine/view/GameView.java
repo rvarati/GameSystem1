@@ -43,7 +43,7 @@ public class GameView implements Observer {
 		gameViewFrame = new GameViewFrame();
 	}
 
-	@Override
+	//@Override
 	public void update(Observable arg0, Object arg1) {
 		count++;
 		GameState gameState = (GameState) arg1;
@@ -321,7 +321,7 @@ public class GameView implements Observer {
 					final GameState localGameState = gameState;
 					final Observable localArg = arg0;
 					Timer timer = new Timer(timerValue, new ActionListener() {
-						@Override
+						//@Override
 						public void actionPerformed(ActionEvent arg1) {
 							System.out.println("Timer expired");
 							GameViewFrame.resetLayeredPane();

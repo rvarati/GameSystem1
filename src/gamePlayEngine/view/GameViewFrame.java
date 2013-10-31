@@ -157,13 +157,13 @@ public class GameViewFrame extends javax.swing.JFrame {
 		checkBox.addMouseListener(new MouseListener(){
 			JTextArea ta = new JTextArea();
 			JScrollPane scrollPane = new JScrollPane();
-			@Override
+			//@Ovverride
 			public void mouseClicked(MouseEvent arg0) {
 				// TODO Auto-generated method stub
 				
 			}
 
-			@Override
+			//@Ovverride
 			public void mouseEntered(MouseEvent arg0) {
 				// TODO Auto-generated method stub
 				jPanelScene = Util.panelPosition(Location.UL, false, currentProp);				
@@ -177,20 +177,20 @@ public class GameViewFrame extends javax.swing.JFrame {
 				layeredPane.add(jPanelScene);
 			}
 
-			@Override
+			//@Ovverride
 			public void mouseExited(MouseEvent arg0) {
 				// TODO Auto-generated method stub
 				System.out.println("Exitting!!!");
 				jPanelScene.remove(scrollPane);
 			}
 
-			@Override
+			//@Ovverride
 			public void mousePressed(MouseEvent arg0) {
 				// TODO Auto-generated method stub
 				
 			}
 
-			@Override
+			//@Ovverride
 			public void mouseReleased(MouseEvent arg0) {
 				// TODO Auto-generated method stub
 				
@@ -200,7 +200,7 @@ public class GameViewFrame extends javax.swing.JFrame {
 		
 		checkBox.addItemListener(new ItemListener(){
 
-			@Override
+			//@Ovverride
 			public void itemStateChanged(ItemEvent e) {
 				// TODO Auto-generated method stub
 				String[] params = e.paramString().split(",");
@@ -335,12 +335,12 @@ public class GameViewFrame extends javax.swing.JFrame {
 		ip.addMouseListener(new MouseListener(){
 			JTextArea ta;
 			JScrollPane pane;
-			@Override
+			//@Ovverride
 			public void mouseClicked(MouseEvent e) {			
 				// TODO Auto-generated method stub				
 			}
 
-			@Override
+			//@Ovverride
 			public void mouseEntered(MouseEvent e) {
 				// TODO Auto-generated method stub
 				System.out.println("Profile Information is : "+toDisplay);
@@ -355,18 +355,18 @@ public class GameViewFrame extends javax.swing.JFrame {
 				layeredPane.add(jPanelScene);
 			}
 
-			@Override
+			//@Ovverride
 			public void mouseExited(MouseEvent e) {				
 				ta.setVisible(false);
 				jPanelScene.remove(ta);							
 			}
 
-			@Override
+			//@Ovverride
 			public void mousePressed(MouseEvent arg0) {
 				// TODO Auto-generated method stub				
 			}
 
-			@Override
+			//@Ovverride
 			public void mouseReleased(MouseEvent arg0) {
 				// TODO Auto-generated method stub				
 			}
@@ -405,7 +405,7 @@ public class GameViewFrame extends javax.swing.JFrame {
 
 			btn.addActionListener(new ActionListener() {
 
-				@Override
+				//@Ovverride
 				public void actionPerformed(ActionEvent arg0) {					
 					resetLayeredPane();
 				}
@@ -427,9 +427,9 @@ public class GameViewFrame extends javax.swing.JFrame {
 			jPanelScene = Util.panelPosition(prop.getLocation(), false, prop);
 			jPanelScene.add(btn);
 			layeredPane.add(jPanelScene, new Integer(0), 100);
-			
+		
 			btn.addActionListener(new ActionListener() {				
-				@Override
+				////@Ovverride
 				public void actionPerformed(ActionEvent e) {
 					// TODO Auto-generated method stub
 					resetLayeredPane();
