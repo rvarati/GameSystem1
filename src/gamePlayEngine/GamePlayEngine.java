@@ -31,7 +31,7 @@ public class GamePlayEngine {
 		//start the game by calling modelboundary
 		//gameModelBoundary.startGame("./GameXML/TestGame1_Variations/Button-Color-ChangeV1.1.xml");
 
-		gameModelBoundary.startGame("./GameXML/TestGame2_Variations/TestGame2_new_1.xml");
+		//gameModelBoundary.startGame("./GameXML/TestGame2_Variations/TestGame2_new_1.xml");
 
 		gameModelBoundary.startGame("./GameXML/TestGame2_Variations/Button-Color-ChangeV1.2.xml");
 
