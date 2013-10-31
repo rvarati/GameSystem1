@@ -163,7 +163,7 @@
 								reward points to the player's initial player -->
 							<!-- -->
 							<text>You Won!!! Your current points are</text>
-							<textSize>12</textSize>
+							<textSize>14</textSize>
 							<font>Aerial</font>
 						<behavior> Reward.GetPoints </behavior>
 						<next>screen3</next>
@@ -203,7 +203,7 @@
 						</type>
 						<color>RED</color>
 						<location>ULC</location>
-						<size>MEDIUM</size>
+						<size>SMALL</size>
 						<!-- -->
 						<!-- The below text is presented on the button1 -->
 						<!-- -->

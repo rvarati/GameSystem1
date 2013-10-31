@@ -114,12 +114,12 @@ public class Util {
 		Dimension dimension = new Dimension();
 		switch (size) {
 		case SMALL:
-			dimension.height = 25;
-			dimension.width = 50;
+			dimension.height = 40;
+			dimension.width = 150;
 			break;
 		case MEDIUM:
-			dimension.height = 100;
-			dimension.width = 100;
+			dimension.height = 50;
+			dimension.width = 200;
 			break;
 		case LARGE:
 			dimension.height = 1000;
@@ -170,7 +170,7 @@ public class Util {
 			jPanel.setOpaque(true);
 			break;
 		case UC:
-			jPanel.setBounds(150, 70, 250, 700);
+			jPanel.setBounds(400, 160, 250, 700);
 			jPanel.setOpaque(true);
 			break;
 		case ULC:
@@ -214,7 +214,7 @@ public class Util {
 			jPanel.setOpaque(true);
 			break;
 		case DLC:
-			jPanel.setBounds(500, 370, 200, 160);
+			jPanel.setBounds(500, 220, 200, 160);
 			jPanel.setOpaque(true);
 			break;
 		case DL:
