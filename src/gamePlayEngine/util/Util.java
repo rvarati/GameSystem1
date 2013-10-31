@@ -29,6 +29,18 @@ public class Util {
 		 if(col.equals("LIGHT_PURPLE")) {
 			 c = new Color(210, 166, 255);
 		 }
+		 if(col.equals("LIGHT_RED")) {
+			 c = new Color(255, 117, 117);
+		 }
+		 if(col.equals("LIGHT_PINK")) {
+			 c = new Color(255, 166, 255);
+		 }
+		 if(col.equals("LIGHT_ORANGE")) {
+			 c = new Color(241, 142, 10);
+		 }
+		 if(col.equals("LIGHT_PEACH")) {
+			 c = new Color(255,206,132);
+		 }
 		 if(col.equals("RED") ||col.equals("WHITE") || col.equals("YELLOW") || col.equals("BLACK") || 
 				 col.equals("GRAY") || col.equals("LIGHT_GRAY") || col.equals("MAGENTA") || 
 				 col.equals("BLUE") || col.equals("DARK_GRAY") || col.equals("ORANGE") || 
@@ -58,6 +70,22 @@ public class Util {
 		 if(col.equals("DARK_PURPLE")) {
 				c = new Color(91,0,183);
 		 }
+		 if(col.equals("DARK_RED")) {
+				c = new Color(196,0,0);
+		 }
+		 if(col.equals("DARK_PINK")) {
+				c = new Color(232,0,75);
+		 }
+		 if(col.equals("DARK_ORANGE")) {
+				c = new Color(241,142,10);
+		 }
+		 if(col.equals("DARK_PEACH")) {
+				c = new Color(254,163,27);
+		 }
+		 if(col.equals("MEDIUM_PEACH")) {
+				c = new Color(254,182,73);
+		 }
+		 
 		System.out.println("Inside Util!!");
 		System.out.println(col);
 		
