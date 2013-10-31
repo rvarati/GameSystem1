@@ -48,12 +48,16 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.border.LineBorder;
+//import org.apache.log4j.Logger;
 
 public class GameViewFrame extends javax.swing.JFrame {
 
+	private static final int JPANELSCENECONSTANT = 100;
+	private static final int FRAME_WIDTH = 600;
+	private static final int FRAME_HEIGHT = 800;
 	private GameController controller;
-	JFrame jFrame;
-	JPanel jPanelScene;
+	private JFrame jFrame;
+	private JPanel jPanelScene;
 	private static JLayeredPane layeredPane;
 	private BufferedImage myPicture;
 
@@ -73,47 +77,37 @@ public class GameViewFrame extends javax.swing.JFrame {
 
 		jFrame = new JFrame("Background Example");
 
-		// jFrame.getContentPane().add(jxImagePanel,0);
-
-		// JLabel picLabel = new JLabel(new ImageIcon(myPicture));
 		JLabel picLabel = new JLabel();
 
 		picLabel.setSize(this.getWidth(), this.getHeight());
 		picLabel.setLayout(new FlowLayout());
 
-		// picLabel.setSize(1000, 800);
-		// jFrame.getContentPane().add(picLabel, 0);
-
-		// jFrame.getContentPane().setBackground(new Color(0, 255, 255));
+		
 		jFrame.setLocationRelativeTo(null);
 		jFrame.pack();
 		jFrame.setVisible(true);
 		jFrame.setSize(1000, 800);
 		jFrame.setLayout(new BorderLayout());
 
-		// Display frame in center of the screen
 		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
 		jFrame.setLocation(dim.width / 2 - jFrame.getSize().width / 2,
 				dim.height / 2 - jFrame.getSize().height / 2);
 		layeredPane = new JLayeredPane();
 		jFrame.add(layeredPane, BorderLayout.CENTER);
 		layeredPane.setBounds(0, 0, 1000, 800);
-		//setBackgroundImage("BlueSky.png");
+
 	}
 
 	public void setBackgroundImage(String imageName) {
-		// TODO Read image name from the backdrop and check whether it is
-		// present in resources folder.
 		
 		Image image = null;
 		try {
 			image = ImageIO.read(getClass().getResource(imageName));
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		jFrame.add(new ImagePanel(image));
-		jFrame.setSize(800, 600);
+		jFrame.setSize(FRAME_HEIGHT, FRAME_WIDTH);
 		jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		jFrame.setVisible(true);
 	}
@@ -123,22 +117,14 @@ public class GameViewFrame extends javax.swing.JFrame {
 			String next = prop.getNext();
 			System.out.println("Iniyan ... Next to display is" + prop.getNext());
 
-			// Start the nextscreen
-			
 			if (next != null) {
 				if (next.contains("screen")) {
-					//gameState.setMessage(Message.PlayComplete);
-					//GameController.viewListener((Observable)prop, gameState);
-					//GameController.screenToEnd(gameState);
-					//if(!(prop.getType().getTypeName().equals("Button3"))){
-							
 								GameController.startNextScreen(next, gameState);
 							
 				}
 			} else {
 				System.out.println("Need to start sequencing");
 			}
-			// TODO if next tag is not present do sequencing.
 			setVisible(false);
 		}
 	}
@@ -152,47 +138,39 @@ public class GameViewFrame extends javax.swing.JFrame {
 		checkBox.setSelected(false);		
 		checkBox.setBackground(Color.yellow);
 		jPanelScene.add(checkBox);
-		layeredPane.add(jPanelScene,100);	
+		layeredPane.add(jPanelScene,JPANELSCENECONSTANT);	
 		
 		checkBox.addMouseListener(new MouseListener(){
-			JTextArea ta = new JTextArea();
-			JScrollPane scrollPane = new JScrollPane();
-			//@Ovverride
+			private JTextArea ta = new JTextArea();
+			private JScrollPane scrollPane = new JScrollPane();
 			public void mouseClicked(MouseEvent arg0) {
-				// TODO Auto-generated method stub
 				
 			}
 
-			//@Ovverride
+			
 			public void mouseEntered(MouseEvent arg0) {
-				// TODO Auto-generated method stub
+			
 				jPanelScene = Util.panelPosition(Location.UL, false, currentProp);				
 				ta = new JTextArea(currentProp.getHint(),5,15);				
 				ta.setLineWrap(true);					
 				ta.setWrapStyleWord(true);
-				//scrollPane = new JScrollPane(ta);
+				
 				jPanelScene.add(new JLabel("Hint : "));
-				//jPanelScene.add(scrollPane);
+				
 			    jPanelScene.add(ta);
 				layeredPane.add(jPanelScene);
 			}
 
-			//@Ovverride
+			
 			public void mouseExited(MouseEvent arg0) {
-				// TODO Auto-generated method stub
 				System.out.println("Exitting!!!");
 				jPanelScene.remove(scrollPane);
 			}
 
-			//@Ovverride
 			public void mousePressed(MouseEvent arg0) {
-				// TODO Auto-generated method stub
-				
 			}
 
-			//@Ovverride
 			public void mouseReleased(MouseEvent arg0) {
-				// TODO Auto-generated method stub
 				
 			}
 			
@@ -200,24 +178,10 @@ public class GameViewFrame extends javax.swing.JFrame {
 		
 		checkBox.addItemListener(new ItemListener(){
 
-			//@Ovverride
 			public void itemStateChanged(ItemEvent e) {
-				// TODO Auto-generated method stub
 				String[] params = e.paramString().split(",");
 				if(((JCheckBox)e.getSource()).getMnemonic() == 'C'){
 				gameState.setIsCorrect(true);
-				// Get the Reward object and add the points.
-				/*Reward reward = GameModel.getGameModelObject()
-						.getCharacter().getReward();
-				reward.addPoints(5000);
-				// Set the reward back to the game character.
-				GameModel.getGameModelObject().getCharacter()
-						.setReward(reward);
-				System.out.println("Reward Points are"
-						+ reward.getPoints());
-		    			
-				System.out.println(params[params.length - 1]);*/
-					
 				}                
 			}			
 		});
@@ -240,15 +204,11 @@ public class GameViewFrame extends javax.swing.JFrame {
 		JFrame jFrame = new JFrame(name);
 		jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		// 3. Create components and put them in the frame.
-		// ...create emptyLabel...
 		jFrame.setSize(1000, 800);
 		jFrame.setLayout(new BorderLayout());
 
-		// 4. Size the frame.
 		jFrame.pack();
 
-		// 5. Show it.
 		jFrame.setVisible(false);
 		return jFrame;
 
@@ -291,7 +251,6 @@ public class GameViewFrame extends javax.swing.JFrame {
 			image = ImageIO.read(getClass().getResource(imageName));
 			System.out.println("Reading image from the file");
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	
@@ -324,7 +283,6 @@ public class GameViewFrame extends javax.swing.JFrame {
 		String communication = profile.getCommunication();
 		String leadership = profile.getLeadership();
 		String teamWork = profile.getTeamwork();
-		//have to add availability
 		String demoGraphics = profile.getDemographics();
 		final String str = "CHARACTER PROFILE";
 		final String toDisplay = str+ "\n" + "\r\nName: "+name + "\n" +"\r\nTitle : "+title+ "\n" + "\r\nTeamWork : "+teamWork+
@@ -333,20 +291,16 @@ public class GameViewFrame extends javax.swing.JFrame {
 				                   "\r\nTeamwork: " + teamWork;	
 		
 		ip.addMouseListener(new MouseListener(){
-			JTextArea ta;
-			JScrollPane pane;
-			//@Ovverride
+			private JTextArea ta;
+			private JScrollPane pane;
 			public void mouseClicked(MouseEvent e) {			
-				// TODO Auto-generated method stub				
 			}
 
-			//@Ovverride
 			public void mouseEntered(MouseEvent e) {
-				// TODO Auto-generated method stub
 				System.out.println("Profile Information is : "+toDisplay);
 				jPanelScene = Util.panelPosition(Location.UC, false, prop);
 				ta = new JTextArea(toDisplay);
-				ta.setEditable(false);  //so that it cannot be edited
+				ta.setEditable(false);  // TODO so that it cannot be edited
 				ta.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));
 				ta.setSize(jPanelScene.getWidth(), jPanelScene.getHeight());
 				ta.setLineWrap(true);
@@ -355,20 +309,15 @@ public class GameViewFrame extends javax.swing.JFrame {
 				layeredPane.add(jPanelScene);
 			}
 
-			//@Ovverride
 			public void mouseExited(MouseEvent e) {				
 				ta.setVisible(false);
 				jPanelScene.remove(ta);							
 			}
 
-			//@Ovverride
 			public void mousePressed(MouseEvent arg0) {
-				// TODO Auto-generated method stub				
 			}
 
-			//@Ovverride
 			public void mouseReleased(MouseEvent arg0) {
-				// TODO Auto-generated method stub				
 			}
 			
 		});
@@ -391,6 +340,7 @@ public class GameViewFrame extends javax.swing.JFrame {
 				System.out.println("Inside GameViewFrame if statement");
 			}
 			else
+			{
 				btn.setBackground(Util
 						.StringToColor(prop.getColor().toString()));
 
@@ -405,11 +355,11 @@ public class GameViewFrame extends javax.swing.JFrame {
 
 			btn.addActionListener(new ActionListener() {
 
-				//@Ovverride
 				public void actionPerformed(ActionEvent arg0) {					
 					resetLayeredPane();
 				}
 			});
+			}
 		}else if(prop.getType().getTypeName().equals("Button3")){
 			JButton btn = new JButton(prop.getText());
 			if (prop.getColor() == null){
@@ -417,6 +367,7 @@ public class GameViewFrame extends javax.swing.JFrame {
 				System.out.println("Inside GameViewFrame if statement");
 			}
 			else
+			{
 				btn.setBackground(Util
 						.StringToColor(prop.getColor().toString()));
 
@@ -429,17 +380,13 @@ public class GameViewFrame extends javax.swing.JFrame {
 			layeredPane.add(jPanelScene, new Integer(0), 100);
 		
 			btn.addActionListener(new ActionListener() {				
-				////@Ovverride
 				public void actionPerformed(ActionEvent e) {
-					// TODO Auto-generated method stub
 					resetLayeredPane();
 					System.out.println("Calling Next screen.......................");
 					displayNext(prop, gameState);	
-					//gameState.setMessage(Message.PlayComplete);
-					//GameController.viewListener((Observable)prop, gameState);
 				}
 			});
-			
+			}
 		}
 		/**
 		 * Create panel with Act+Scene+Screen name. and populate with game
@@ -447,10 +394,6 @@ public class GameViewFrame extends javax.swing.JFrame {
 		 * interaction.
 		 */
 
-		// Retrieve Actname, Scenename, Screen name.
-		final String btnText = prop.getText();
-		final JFrame jFrameFinal = jFrame;
-		// final TimedButton button = btn;
 		
 	}
 }
