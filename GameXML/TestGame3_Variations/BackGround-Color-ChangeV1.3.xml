@@ -75,7 +75,7 @@
 		</gameElement>
 		<sceneStructure>			
 			<identifier> scene1 </identifier>									
-			<backdrop>bkgrnd.png</backdrop> <!-- change this background to blue -->
+			<backdrop>bkgrnd.png</backdrop> 
 				<screenStructure>				
 				<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 						xsi:type="prop">

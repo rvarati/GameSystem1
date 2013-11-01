@@ -109,7 +109,7 @@
 							</type>		
 							<color>YELLOW</color>
 							<location>UUC</location>
-							<size>LARGE</size>
+							<size>MEDIUM</size>
 							<text> The designers need to use a complex AI algorithm that is available as a 3rd party component with an API. The designers know there are a number of possible components available on marketplace, which are undergoing extensive performance evaluations.</text>
 
 
@@ -125,7 +125,7 @@
 							</type>							
 							<color>YELLOW</color>
 							<location>UC</location>
-							<size>LARGE</size>
+							<size>MEDIUM</size>
 							<text> Which design pattern would be suitable to reduce the impact of this eventual recommendation? </text>					
 												
 						</stemQuestion>
