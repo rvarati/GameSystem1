@@ -145,6 +145,33 @@
 			</gameElement>
 		</screenStructure>
 		</sceneStructure>
+		<sceneStructure>
+		    <identifier>scene2</identifier>
+		    <backdrop>bkgrnd.png</backdrop>
+		<screenStructure>
+		    <gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xsi:type="prop">
+				<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							xsi:type="Identifier">
+							<id> screen4 </id>
+						</gameElement>
+				<type>
+				<typeName>InformationBox4</typeName>
+				<event>
+					<eventName>NONE</eventName>
+					<animation>NONE</animation>
+					<time>LONG</time>
+					<action>NONE</action>
+				</event>
+				</type>
+				<color>GREEN</color>
+				<location>UUC</location>
+				<size>LARGE</size>				
+				<textSize>12</textSize>
+				<font>Aerial</font>
+			</gameElement>
+			</screenStructure>
+		</sceneStructure>
 		</actStructure>
 </game>
 
