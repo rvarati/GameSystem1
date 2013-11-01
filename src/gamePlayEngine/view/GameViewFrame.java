@@ -262,6 +262,7 @@ public class GameViewFrame extends javax.swing.JFrame {
 		ip.setOpaque(false);
 		ip.setSize(250, 400);
 	    layeredPane.add(ip);
+	    layeredPane.setVisible(true);
 	   // jFrame.add(layeredPane);
 	    //jFrame.setLocationRelativeTo(null);
 	    //jFrame.setVisible(true);

@@ -27,7 +27,7 @@ public class Util {
 			 c = new Color(126, 211, 188);
 		 }
 		 if(col.equals("LIGHT_PURPLE")) {
-			 c = new Color(210, 166, 255);
+			 c = new Color(188, 121, 255);
 		 }
 		 if(col.equals("LIGHT_RED")) {
 			 c = new Color(255, 117, 117);
@@ -55,6 +55,9 @@ public class Util {
              			c = new Color(255, 0, 0);
              		}
 		}
+		 if(col.equals("PURPLE")) {
+			 c = new Color(130, 4, 255);
+		 }
 		 if(col.equals("TURQUOISE")) {
 			 c = new Color(62, 181, 148);
 		 }
@@ -68,7 +71,7 @@ public class Util {
 				c = new Color(37, 109, 89);
 		}
 		 if(col.equals("DARK_PURPLE")) {
-				c = new Color(91,0,183);
+				c = new Color(64,0,128);
 		 }
 		 if(col.equals("DARK_RED")) {
 				c = new Color(196,0,0);
@@ -218,7 +221,7 @@ public class Util {
 			jPanel.setOpaque(true);
 			break;
 		case DLC:
-			jPanel.setBounds(600, 260, 200, 160);
+			jPanel.setBounds(400, 260, 200, 160);
 			jPanel.setOpaque(true);
 			break;
 		case DL:

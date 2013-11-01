@@ -10,6 +10,8 @@ import java.util.List;
 import java.util.Observable;
 
 import gamePlayEngine.model.act.Act;
+import gamePlayEngine.model.challenge.Challenge;
+import gamePlayEngine.model.challenge.Quiz;
 import gamePlayEngine.model.gameElement.GameElement;
 import gamePlayEngine.model.gameElement.graphic.Prop;
 import gamePlayEngine.model.gameElement.player.reward.RewardBoundary;
@@ -35,10 +37,14 @@ public class GameController implements ActionListener {
 	private static int currentScene;
 	private static int currentScreen;
 	private static int currentGameElement;
+	private static int currentQuiz;
 	private static Act actToStart = new Act();
 	private static Scene sceneToStart = new Scene();
 	private static Screen screenToStart = new Screen();
 	private static GameElement gameElementToStart = new GameElement();
+	private static Challenge challengeToStart = new Challenge();
+	private static Quiz quizToStart = new Quiz();
+
 
 	/**
 	 * Initializes GameBoundary and RewardBoundary
@@ -356,6 +362,63 @@ public class GameController implements ActionListener {
 			System.out.println("Exception in GameController gameElementToEnd():" + e);
 		}
 	}
+	
+	public static boolean quizToStart(GameState gameState) {
+
+		boolean isQuizStart = false;
+		if (currentQuiz < challengeToStart.getQuiz().size()) {
+			isQuizStart = true;
+			currentQuiz = 0;
+			quizToStart = challengeToStart.getQuiz().get(currentQuiz);
+			try {
+
+				quizToStart.quizStart(gameState);
+			}
+
+			catch (Exception e) {
+				System.err.print(e);
+			}
+
+		}
+		return isQuizStart;
+	}
+	
+	public static boolean isQuizStart() {
+		boolean isQuizStart = false;
+		if (currentQuiz < quizToStart.getQuiz().size()) {
+			isQuizStart = true;
+		}
+		return isQuizStart;
+
+	}
+	
+	public static void quizToPlay(GameState gameState) {
+
+		if (currentScreen < quizToStart.getQuiz().size()) {
+			// screenToStart = sceneToStart.getScreens().get(currentScreen);
+			try {
+
+				quizToStart.quizPlay(gameState);
+
+			}
+
+			catch (Exception e) {
+				System.err.print(e);
+			}
+
+		}
+	}
+	
+	public static void quizToEnd(GameState gameState) {
+		currentScreen++;
+		try {
+			quizToStart.quizEnd(gameState);
+
+		} catch (Exception e) {
+			System.err.print(e);
+		}
+	}
+	
 
 	// ----------------PROP----------------------------
 
@@ -529,5 +592,30 @@ public class GameController implements ActionListener {
 				}
 			}
 		}
+		
+
+		if (Quiz.class.isInstance(observable)) {
+			if (message == Message.StartComplete) {
+				System.out
+						.println("Controller :ScreenStartComplete message is received");
+				quizToStart(gameState);
+				
+
+			}
+			if (message == Message.PlayComplete) {
+				System.out
+						.println("Controller :ScreenPlayComplete message is received");
+				quizToPlay(gameState);							
+			}
+			if (message == Message.EndComplete) {
+				System.out
+						.println("Controller: Screen end complete message is received.");
+				//displayNext((Prop) gameState.getGameElement(),gameState);
+				if (isQuizStart())
+					quizToStart(gameState);
+				else
+					quizToEnd(gameState);
+			}
+	   }
 	}
 }
