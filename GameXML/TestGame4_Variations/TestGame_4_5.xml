@@ -88,6 +88,7 @@
 							xsi:type="IDENTIFIER">
 							<id> challenge1 </id>
 						</gameElement>
+						<quiz>
 <!-- 
 ++++ acts, scenes, screens, challenges are not game elements - need to rename
 ++++ challenge can have one or more items in it (questions)
@@ -213,7 +214,8 @@
 							<evaluation>Incorrect</evaluation>
 							<hint>The Singleton pattern that restricts the instantiation of a class to only one object. It is a creational pattern.</hint>
 						</stemOption>
-					</gameElement>							
+					</gameElement>	
+					</quiz>						
 				</challengeStructure>
 								
 				</gameElement>
