@@ -125,6 +125,10 @@ public class Util {
 			dimension.height = 100;
 			dimension.width = 200;
 			break;
+		case EXTRA_LARGE:
+			dimension.height = 200;
+			dimension.width = 200;
+			break;
 
 		}
 		return dimension;

@@ -150,7 +150,7 @@ public class GameViewFrame extends javax.swing.JFrame {
 			
 			public void mouseEntered(MouseEvent arg0) {
 			
-				jPanelScene = Util.panelPosition(Location.UL, false, currentProp);				
+				jPanelScene = Util.panelPosition(currentProp.getLocation(), false, currentProp);				
 				ta = new JTextArea(currentProp.getHint(),5,15);				
 				ta.setLineWrap(true);					
 				ta.setWrapStyleWord(true);
@@ -164,7 +164,8 @@ public class GameViewFrame extends javax.swing.JFrame {
 			
 			public void mouseExited(MouseEvent arg0) {
 				System.out.println("Exitting!!!");
-				jPanelScene.remove(scrollPane);
+				ta.setVisible(false);
+				jPanelScene.remove(ta);
 			}
 
 			public void mousePressed(MouseEvent arg0) {
