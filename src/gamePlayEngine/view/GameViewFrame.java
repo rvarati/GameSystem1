@@ -195,8 +195,8 @@ public class GameViewFrame extends javax.swing.JFrame {
 		} catch (NullPointerException e) {
 			jPanelScene = Util.panelPosition(Location.C, true, currentProp);
 		}
-		layeredPane.add(jPanelScene, 100);
-		
+		layeredPane.add(jPanelScene, 200);
+				
 		displayNext(currentProp, gameState);
 	}
 

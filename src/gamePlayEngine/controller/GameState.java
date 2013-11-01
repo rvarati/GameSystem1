@@ -1,6 +1,7 @@
 package gamePlayEngine.controller;
 
 import gamePlayEngine.model.act.Act;
+import gamePlayEngine.model.challenge.Quiz;
 import gamePlayEngine.model.gameElement.GameElement;
 import gamePlayEngine.model.scene.Scene;
 import gamePlayEngine.model.screen.Screen;
@@ -11,6 +12,7 @@ public class GameState {
 	Screen screen;
 	Scene scene;
 	GameElement gameElement;
+	Quiz quiz;
 	private String title;
 	
 	
@@ -65,6 +67,13 @@ public class GameState {
 
 	public void setScene(Scene scene) {
 		this.scene = scene;
+	}
+	
+	public Quiz getQuiz() {
+		return quiz;
+	}
+	public void setQuiz(Quiz q) {
+		quiz = q;
 	}
 
 	public Message getMessage() {

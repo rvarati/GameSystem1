@@ -122,7 +122,7 @@ public class Util {
 			dimension.width = 200;
 			break;
 		case LARGE:
-			dimension.height = 1000;
+			dimension.height = 100;
 			dimension.width = 200;
 			break;
 
@@ -214,7 +214,7 @@ public class Util {
 			jPanel.setOpaque(true);
 			break;
 		case DLC:
-			jPanel.setBounds(600, 140, 200, 160);
+			jPanel.setBounds(500, 140, 200, 160);
 			jPanel.setOpaque(true);
 			break;
 		case DL:
