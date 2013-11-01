@@ -226,11 +226,7 @@ public class GameViewFrame extends javax.swing.JFrame {
 	public void addImage(final GameState gameState) {
 
 		final Prop prop = (Prop) gameState.getGameElement();
-       
-        if(prop.getLocation() == null) {
-        	System.out.println("location is null");
-        }
-        
+              
 		try{
 			System.out.println("Background: " + gameState.getScene().getBackdrop());
 			setBackgroundImage(gameState.getScene().getBackdrop());
@@ -256,16 +252,25 @@ public class GameViewFrame extends javax.swing.JFrame {
 			e.printStackTrace();
 		}
 	
-		ImagePanel ip = new ImagePanel(image);
+		ImageIcon i = new ImageIcon("src/char9_StandClosed.png");
+		System.out.println("Creating image");
+		JLabel l = new JLabel(i);
+		System.out.println("Creating image2");
+		add(l);
+		jPanelScene.add(l);
+		l.setSize(250,400);
+		//layeredPane.add(jPanelScene);
+		//layeredPane.setVisible(true);
+		/*ImagePanel ip = new ImagePanel(image);
 		ip.setImage(image);
 		ip.setLocation(jPanelScene.getX(), jPanelScene.getY());
-		ip.setOpaque(false);
-		ip.setSize(250, 400);
-	    layeredPane.add(ip);
-	    layeredPane.setVisible(true);
-	   // jFrame.add(layeredPane);
-	    //jFrame.setLocationRelativeTo(null);
-	    //jFrame.setVisible(true);
+		ip.setOpaque(true);
+		ip.setSize(250, 400);*/
+		jFrame.add(l);
+		//jPanelScene.add(ip);*/
+	    layeredPane.add(jPanelScene, JLayeredPane.PALETTE_LAYER);
+	    //layeredPane.setVisible(true);
+	   
 		System.out.println("Image done!!");
 		Profile profile = GameModel.getGameModelObject().getCharacter().getProfile();
 		String name = profile.getName();
@@ -296,7 +301,7 @@ public class GameViewFrame extends javax.swing.JFrame {
 				                  "\r\nExperience : "+ experienceYrs + "\n" + "\r\nLeadership : "+ leadership + "\n" +
 				                   "\r\nTeamwork: " + teamWork;	
 		
-		ip.addMouseListener(new MouseListener(){
+		l.addMouseListener(new MouseListener(){
 			private JTextArea ta;
 			private JScrollPane pane;
 			public void mouseClicked(MouseEvent e) {			
@@ -399,7 +404,7 @@ public class GameViewFrame extends javax.swing.JFrame {
 		 * elements. Once we create all the panels, link the panels with user
 		 * interaction.
 		 */
-
+        jFrame.setVisible(true);
 		
 	}
 }
