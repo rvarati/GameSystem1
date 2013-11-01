@@ -26,15 +26,21 @@ public class ImagePanel extends JPanel {
             }
         });
         //add(checkBox, BorderLayout.SOUTH);
-        this.setOpaque(true);
-        Dimension size = new Dimension(image.getWidth(null), image.getHeight(null));
-        setPreferredSize(size);
-        setMinimumSize(size);
-        setMaximumSize(size);
-        setSize(size);
-        setLayout(null);
+        //this.setOpaque(true);
+        //Dimension size = new Dimension(image.getWidth(null), image.getHeight(null));
+        Dimension size = new Dimension(20,30);
+       // setPreferredSize(size);
+       // setMinimumSize(size);
+       // setMaximumSize(size);
+       setSize(size);
+       // setLayout(null);
         
     };
+    
+    public void setImage(Image image) {
+    	this.image = image;
+    	repaint();
+    }
 
     @Override
     public void paintComponent(Graphics g) {
@@ -52,5 +58,6 @@ public class ImagePanel extends JPanel {
         } else {
             g.drawImage(image, 0, 0, getWidth(), getHeight(), this);
         }
-    }
+    }      
+    
 }

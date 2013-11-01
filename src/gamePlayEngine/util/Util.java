@@ -126,7 +126,7 @@ public class Util {
 			dimension.width = 200;
 			break;
 		case EXTRA_LARGE:
-			dimension.height = 200;
+			dimension.height = 150;
 			dimension.width = 200;
 			break;
 
@@ -149,7 +149,7 @@ public class Util {
 			jPanel.setOpaque(true);
 			break;
 		case UURC:
-			jPanel.setBounds(200, 0, 200, 160);
+			jPanel.setBounds(370, 170, 200, 160);
 			jPanel.setOpaque(true);
 			break;
 		case UUC:
@@ -166,11 +166,11 @@ public class Util {
 			break;
 			
 		case UR:
-			jPanel.setBounds(600, 100, 200, 160);
+			jPanel.setBounds(600, 170, 200, 160);
 			jPanel.setOpaque(true);
 			break;
 		case URC:
-			jPanel.setBounds(600, 50, 200, 160);
+			jPanel.setBounds(600, 90, 200, 160);
 			jPanel.setOpaque(true);
 			break;
 		case UC:
@@ -214,11 +214,11 @@ public class Util {
 			jPanel.setOpaque(true);
 			break;
 		case DC:
-			jPanel.setBounds(400, 350, 200, 160);
+			jPanel.setBounds(370, 350, 200, 160);
 			jPanel.setOpaque(true);
 			break;
 		case DLC:
-			jPanel.setBounds(500, 140, 200, 160);
+			jPanel.setBounds(600, 260, 200, 160);
 			jPanel.setOpaque(true);
 			break;
 		case DL:

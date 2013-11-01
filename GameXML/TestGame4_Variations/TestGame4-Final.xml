@@ -88,6 +88,7 @@
 							xsi:type="IDENTIFIER">
 							<id> challenge1 </id>
 						</gameElement>
+						<!-- <quiz> -->
 <!-- 
 ++++ acts, scenes, screens, challenges are not game elements - need to rename
 ++++ challenge can have one or more items in it (questions)
@@ -109,10 +110,9 @@
 							</type>		
 							<color>YELLOW</color>
 							<location>UUC</location>
-							<size>MEDIUM</size>
+							<size>EXTRA_LARGE</size>
 							<text> The designers need to use a complex AI algorithm that is available as a 3rd party component with an API. The designers know there are a number of possible components available on marketplace, which are undergoing extensive performance evaluations.</text>
-
-
+                            
 						</stemDescription>
 						<stemQuestion>
 							<type>
@@ -124,10 +124,10 @@
 							</event>	
 							</type>							
 							<color>YELLOW</color>
-							<location>UC</location>
-							<size>MEDIUM</size>
+							<location>UURC</location>
+							<size>EXTRA_LARGE</size>
 							<text> Which design pattern would be suitable to reduce the impact of this eventual recommendation? </text>					
-												
+							<textSize>14</textSize>					
 						</stemQuestion>
 						<stemOption>
 						<type>
@@ -213,6 +213,7 @@
 							<evaluation>Incorrect</evaluation>
 							<hint>The Singleton pattern that restricts the instantiation of a class to only one object. It is a creational pattern.</hint>
 						</stemOption>
+						<!-- </quiz> -->
 					</gameElement>							
 				</challengeStructure>
 								

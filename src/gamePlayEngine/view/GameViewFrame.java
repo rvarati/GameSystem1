@@ -201,7 +201,7 @@ public class GameViewFrame extends javax.swing.JFrame {
 		displayNext(currentProp, gameState);
 	}
 
-	public JFrame createNewFrame(String name) {
+	public JFrame createNewFrame(String name, ImagePanel image) {
 		JFrame jFrame = new JFrame(name);
 		jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -209,8 +209,8 @@ public class GameViewFrame extends javax.swing.JFrame {
 		jFrame.setLayout(new BorderLayout());
 
 		jFrame.pack();
-
-		jFrame.setVisible(false);
+        jFrame.validate();
+		jFrame.setVisible(true);
 		return jFrame;
 
 	}
@@ -219,6 +219,7 @@ public class GameViewFrame extends javax.swing.JFrame {
 		layeredPane.removeAll();
 		layeredPane.revalidate();
 		layeredPane.repaint();
+		layeredPane.setVisible(true);
 	}
 		
 
@@ -256,11 +257,14 @@ public class GameViewFrame extends javax.swing.JFrame {
 		}
 	
 		ImagePanel ip = new ImagePanel(image);
-		
+		ip.setImage(image);
 		ip.setLocation(jPanelScene.getX(), jPanelScene.getY());
 		ip.setOpaque(false);
 		ip.setSize(250, 400);
 	    layeredPane.add(ip);
+	   // jFrame.add(layeredPane);
+	    //jFrame.setLocationRelativeTo(null);
+	    //jFrame.setVisible(true);
 		System.out.println("Image done!!");
 		Profile profile = GameModel.getGameModelObject().getCharacter().getProfile();
 		String name = profile.getName();
