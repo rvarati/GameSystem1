@@ -166,7 +166,7 @@
 						</type>
 							<name> Option2 </name>
 							<text> Bridge Pattern </text>
-							<location>ULC</location>
+							<location>URC</location>
 							<color> Yellow </color>
 							<evaluation>Correct</evaluation>
 							<hint>The Bridge pattern decouples an interface and its implementation. The implementation can be modified without changing the interface. It is a structural pattern.</hint>							
@@ -187,7 +187,7 @@
 						</type>
 						<name> Option3 </name>
 							<text> Factory Pattern </text>
-							<location>LC</location>
+							<location>UR</location>
 							<color> Yellow </color>
 							<evaluation>Incorrect</evaluation>		
 							<hint>The Factory pattern defines an interface for creating an object, but lets the classes that implement the interface decide which class to instantiate.  It is a creational pattern.</hint>					

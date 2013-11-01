@@ -75,7 +75,7 @@
 		</gameElement>
 		<sceneStructure>			
 			<identifier> scene1 </identifier>									
-			<backdrop>blue_bg.png</backdrop> <!-- change this background to blue -->
+			<backdrop>bkgrnd.png</backdrop> 
 				<screenStructure>				
 				<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 						xsi:type="prop">
@@ -99,12 +99,11 @@
 							</event>							
 						</type>
 						<behavior> NONE </behavior>
-							<color>YELLOW</color>
+							<color>CYAN</color>
 							<location>C</location>
 							<size>LARGE</size>						
-							<text>Welcome! Test Game 3</text>	
-							
-					   <next>screen2</next>	 <!-- *****added by rithika -->									
+							<text>Welcome! Test Game 3</text>		
+					 						
 					</gameElement>
 				</screenStructure>
 				<screenStructure>
@@ -130,54 +129,33 @@
 							</event>							
 						</type>
 							<behavior> NONE </behavior>
-							<color>YELLOW</color>
+							<color>CYAN</color>
 							<location>C</location>
 							<size>MEDIUM</size>
 							<text> A SoftiCorp Game </text>
-							<next>scene2</next>
 					</gameElement>
 				</screenStructure>
-				</sceneStructure>
-				<sceneStructure>
-				  <identifier> scene2 </identifier>									
-			      <backdrop>CollegeBuilding.png</backdrop> 
-				  <screenStructure>
-				  <gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				<screenStructure>				   
+				<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 						xsi:type="prop">
 						<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 							xsi:type="IDENTIFIER">
-							<id> screen1 </id>
+							<id> screen3 </id>
 						</gameElement>
 						<type>
-						 <event>
-						 <time>SCREEN_MEDIUM</time>
-						 </event>
-						 </type>
-						 <next>screen2</next>
-						</gameElement>
-						</screenStructure>
-						<screenStructure>
-						  <gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-						xsi:type="prop">
-						<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-							xsi:type="IDENTIFIER">
-							<id> screen2 </id>
-							</gameElement>
-						 <type>
-							<typeName>Character1StandClosed.png</typeName>							
+							<typeName>char9_StandClosed.png</typeName>				
 							<event>
 								<eventName>NONE</eventName>
 								<animation>FADEIN</animation>
 								<time>SCENE_LONG</time>								
 								<size>LARGE</size>
-								<action> SHOW </action>
-								<location>UC</location>
+								<action> SHOW </action>								
 							</event>
 							<event>
 								<eventName>Hover</eventName>
 								<animation>FADEIN</animation>
 								<element>MessageBox</element>
-								<location>C</location>
+								<location>UC</location>
 							<text>
 								<name> Ima Coder </name>
 								<id> Character1 </id>
@@ -191,14 +169,15 @@
 								<demographics> Female, Caucasian </demographics>
 								<degrees> B.Sc., Computer Science, Stanford University, Ph.D.  Computer Science, Stanford University </degrees>		 
 							</text>
-							</event>
+							</event>							
 							<next> NONE </next>
 							<!-- <time> SCREEN_MEDIUM </time> -->				
 						</type>
+						<behavior> NONE </behavior>
+						<location>ULC</location>
 				</gameElement>			
 			</screenStructure>
 		</sceneStructure>
 		
 			</actStructure>
 	</game>
-

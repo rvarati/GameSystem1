@@ -86,8 +86,8 @@ public class Util {
 				c = new Color(254,182,73);
 		 }
 		 
-		System.out.println("Inside Util!!");
-		System.out.println(col);
+		//System.out.println("Inside Util!!");
+		//System.out.println(col);
 		
 		
 	/*Field field;
@@ -162,11 +162,11 @@ public class Util {
 			break;
 			
 		case UR:
-			jPanel.setBounds(0, 160, 200, 160);
+			jPanel.setBounds(600, 100, 200, 160);
 			jPanel.setOpaque(true);
 			break;
 		case URC:
-			jPanel.setBounds(200, 160, 200, 160);
+			jPanel.setBounds(600, 50, 200, 160);
 			jPanel.setOpaque(true);
 			break;
 		case UC:
@@ -214,11 +214,11 @@ public class Util {
 			jPanel.setOpaque(true);
 			break;
 		case DLC:
-			jPanel.setBounds(500, 220, 200, 160);
+			jPanel.setBounds(600, 140, 200, 160);
 			jPanel.setOpaque(true);
 			break;
 		case DL:
-			jPanel.setBounds(800, 480, 200, 160);
+			jPanel.setBounds(400, 200, 200, 160);
 			jPanel.setOpaque(true);
 			break;
 		case DDR:

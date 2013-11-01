@@ -73,7 +73,7 @@
 		</gameElement>
 		<sceneStructure>			
 				<identifier> scene1 </identifier>						
-				<backdrop>bkgrnd.png</backdrop>			
+				<backdrop>blue_bg.png</backdrop>			
 			<screenStructure>
 				<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 						xsi:type="prop">
@@ -107,7 +107,7 @@
 								<time>QUICK</time>
 							</event>	
 							</type>		
-							<color>YELLOW</color>
+							<color>GREEN</color>
 							<location>UUC</location>
 							<size>MEDIUM</size>
 							<text> The designers need to use a complex AI algorithm that is available as a 3rd party component with an API. The designers know there are a number of possible components available on marketplace, which are undergoing extensive performance evaluations.</text>
@@ -123,7 +123,7 @@
 								<time>QUICK</time>
 							</event>	
 							</type>							
-							<color>YELLOW</color>
+							<color>GREEN</color>
 							<location>UC</location>
 							<size>MEDIUM</size>
 							<text> Which design pattern would be suitable to reduce the impact of this eventual recommendation? </text>					
