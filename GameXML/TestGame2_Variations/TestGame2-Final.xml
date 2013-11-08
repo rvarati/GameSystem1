@@ -91,7 +91,7 @@
 						<time>LONG</time>
 				</event>
 				</type>	
-				<color>LIGHT_BLUE</color>
+				<color>LIGHT_PINK</color>
 				<location>DLC</location>
 				<size>LARGE</size>				
 				<textSize>12</textSize>
@@ -114,7 +114,7 @@
 					<action>NONE</action>
 				</event>
 				</type>
-				<color>BLUE</color>
+				<color>YELLOW</color>
 				<location>UUC</location>
 				<size>MEDIUM</size>				
 				<textSize>12</textSize>
@@ -137,7 +137,7 @@
 					<action>NONE</action>
 				</event>
 				</type>
-				<color>DARK_BLUE</color>
+				<color>DARK_YELLOW</color>
 				<location>C</location>
 				<size>LARGE</size>				
 				<textSize>12</textSize>
@@ -162,7 +162,7 @@
 						<time>LONG</time>
 				</event>
 				</type>	
-				<color>LIGHT_TURQUOISE</color>
+				<color>LIGHT_PEACH</color>
 				<location>DLC</location>
 				<size>LARGE</size>				
 				<textSize>12</textSize>
@@ -187,7 +187,7 @@
 						<time>LONG</time>
 				</event>
 				</type>	
-				<color>TURQUOISE</color>
+				<color>MEDIUM_PEACH</color>
 				<location>UUC</location>
 				<size>LARGE</size>				
 				<textSize>12</textSize>
@@ -212,7 +212,7 @@
 						<time>LONG</time>
 				</event>
 				</type>	
-				<color>DARK_TURQUOISE</color>
+				<color>DARK_PEACH</color>
 				<location>C</location>
 				<size>LARGE</size>				
 				<textSize>12</textSize>
@@ -237,7 +237,7 @@
 						<time>LONG</time>
 				</event>
 				</type>	
-				<color>LIGHT_PURPLE</color>
+				<color>LIGHT_ORANGE</color>
 				<location>DLC</location>
 				<size>LARGE</size>				
 				<textSize>12</textSize>
@@ -262,7 +262,7 @@
 						<time>LONG</time>
 				</event>
 				</type>	
-				<color>PURPLE</color>
+				<color>ORANGE</color>
 				<location>UUC</location>
 				<size>LARGE</size>				
 				<textSize>12</textSize>
@@ -287,7 +287,7 @@
 						<time>LONG</time>
 				</event>
 				</type>	
-				<color>DARK_PURPLE</color>
+				<color>DARK_ORANGE</color>
 				<location>C</location>
 				<size>LARGE</size>				
 				<textSize>12</textSize>

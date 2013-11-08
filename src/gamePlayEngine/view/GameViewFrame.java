@@ -252,23 +252,24 @@ public class GameViewFrame extends javax.swing.JFrame {
 			e.printStackTrace();
 		}
 	
-		ImageIcon i = new ImageIcon("src/char9_StandClosed.png");
+		/*ImageIcon i = new ImageIcon("src/char9_StandClosed.png");
 		System.out.println("Creating image");
 		JLabel l = new JLabel(i);
 		System.out.println("Creating image2");
 		add(l);
 		jPanelScene.add(l);
-		l.setSize(250,400);
+		l.setSize(250,400);*/
 		//layeredPane.add(jPanelScene);
 		//layeredPane.setVisible(true);
-		/*ImagePanel ip = new ImagePanel(image);
+		ImagePanel ip = new ImagePanel(image);
 		ip.setImage(image);
 		ip.setLocation(jPanelScene.getX(), jPanelScene.getY());
 		ip.setOpaque(true);
-		ip.setSize(250, 400);*/
-		jFrame.add(l);
-		//jPanelScene.add(ip);*/
-	    layeredPane.add(jPanelScene, JLayeredPane.PALETTE_LAYER);
+		ip.setSize(250, 400);
+		//jFrame.add(l);
+		//jPanelScene.add(ip);
+		layeredPane.add(ip);
+	    //layeredPane.add(jPanelScene, JLayeredPane.PALETTE_LAYER);
 	    //layeredPane.setVisible(true);
 	   
 		System.out.println("Image done!!");
@@ -301,7 +302,7 @@ public class GameViewFrame extends javax.swing.JFrame {
 				                  "\r\nExperience : "+ experienceYrs + "\n" + "\r\nLeadership : "+ leadership + "\n" +
 				                   "\r\nTeamwork: " + teamWork;	
 		
-		l.addMouseListener(new MouseListener(){
+		ip.addMouseListener(new MouseListener(){
 			private JTextArea ta;
 			private JScrollPane pane;
 			public void mouseClicked(MouseEvent e) {			

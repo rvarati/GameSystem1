@@ -33,7 +33,7 @@ public class Util {
 			 c = new Color(255, 117, 117);
 		 }
 		 if(col.equals("LIGHT_PINK")) {
-			 c = new Color(255, 166, 255);
+			 c = new Color(255, 193, 214);
 		 }
 		 if(col.equals("LIGHT_ORANGE")) {
 			 c = new Color(241, 142, 10);

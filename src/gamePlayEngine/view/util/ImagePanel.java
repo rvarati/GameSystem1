@@ -32,7 +32,7 @@ public class ImagePanel extends JPanel {
        // setPreferredSize(size);
        // setMinimumSize(size);
        // setMaximumSize(size);
-       //setSize(size);
+       setSize(size);
        // setLayout(null);
         
     };
