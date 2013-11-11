@@ -10,6 +10,7 @@ import gamePlayEngine.model.gamemodel.GameModelBoundary;
 import gamePlayEngine.view.GameView;
 
 /**
+ * edit game system
  * Core GamePlayEngine class - Creates Model, View and Controller and sets up 
  * interaction amongst them.
  */
