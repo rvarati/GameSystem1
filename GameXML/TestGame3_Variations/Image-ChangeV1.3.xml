@@ -143,7 +143,7 @@
 							<id> screen3 </id>
 						</gameElement>
 						<type>
-							<typeName>char9_StandClosed.png</typeName>				
+							<typeName>char2_StandClosed.png</typeName>				
 							<event>
 								<eventName>NONE</eventName>
 								<animation>FADEIN</animation>

@@ -264,7 +264,7 @@ public class GameViewFrame extends javax.swing.JFrame {
 		ImagePanel ip = new ImagePanel(image);
 		ip.setImage(image);
 		ip.setLocation(jPanelScene.getX(), jPanelScene.getY());
-		ip.setOpaque(true);
+		ip.setOpaque(false);
 		ip.setSize(250, 400);
 		//jFrame.add(l);
 		//jPanelScene.add(ip);

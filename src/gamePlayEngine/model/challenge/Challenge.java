@@ -39,7 +39,7 @@ public class Challenge extends Observable {
 		public void challengeStart(GameState gameState) {
 			// Handle Act specific activities in complex games
 			setChanged();
-			gameState.setChallenge(this);
+			//gameState.setChallenge(this);
 			gameState.setMessage(Message.Start);
 			notifyObservers(gameState);
 		}
@@ -47,7 +47,7 @@ public class Challenge extends Observable {
 		
 		public void challengePlay(GameState gameState) throws InterruptedException {
 			setChanged();
-			gameState.setChallenge(this);
+			//gameState.setChallenge(this);
 			gameState.setMessage(Message.Play);
 			notifyObservers(gameState);
 			

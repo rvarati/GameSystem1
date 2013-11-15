@@ -241,7 +241,7 @@ public class Util {
 			//jPanel.setOpaque(true);
 			break;
 		case DDLC:
-			jPanel.setBounds(600, 640, 200, 160);
+			jPanel.setBounds(600, 260, 200, 160);
 			//jPanel.setOpaque(true);
 			break;
 		case DDL:

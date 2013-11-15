@@ -26,7 +26,7 @@ public class ImagePanel extends JPanel {
             }
         });
         //add(checkBox, BorderLayout.SOUTH);
-        //this.setOpaque(true);
+        this.setOpaque(false);
         //Dimension size = new Dimension(image.getWidth(null), image.getHeight(null));
         Dimension size = new Dimension(20,30);
        // setPreferredSize(size);

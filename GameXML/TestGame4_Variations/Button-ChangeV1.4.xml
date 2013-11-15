@@ -88,7 +88,6 @@
 							xsi:type="IDENTIFIER">
 							<id> challenge1 </id>
 						</gameElement>
-						<!-- <quiz> -->
 <!-- 
 ++++ acts, scenes, screens, challenges are not game elements - need to rename
 ++++ challenge can have one or more items in it (questions)
@@ -108,11 +107,12 @@
 								<time>QUICK</time>
 							</event>	
 							</type>		
-							<color>YELLOW</color>
+							<color>GREEN</color>
 							<location>UUC</location>
-							<size>EXTRA_LARGE</size>
+							<size>MEDIUM</size>
 							<text> The designers need to use a complex AI algorithm that is available as a 3rd party component with an API. The designers know there are a number of possible components available on marketplace, which are undergoing extensive performance evaluations.</text>
-                            
+
+
 						</stemDescription>
 						<stemQuestion>
 							<type>
@@ -123,11 +123,11 @@
 								<time>QUICK</time>
 							</event>	
 							</type>							
-							<color>YELLOW</color>
-							<location>UURC</location>
-							<size>EXTRA_LARGE</size>
+							<color>GREEN</color>
+							<location>UC</location>
+							<size>MEDIUM</size>
 							<text> Which design pattern would be suitable to reduce the impact of this eventual recommendation? </text>					
-							<textSize>14</textSize>					
+												
 						</stemQuestion>
 						<stemOption>
 						<type>
@@ -146,7 +146,7 @@
 							<name> Option1 </name>
 							<text> Strategy Pattern </text>
 							<location>UULC</location>
-							<color> Yellow </color>
+							<color> RED </color>
 							<evaluation>Incorrect</evaluation>
 							<hint>The Strategy pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable; algorithms are selected at runtime. It is a behavioral pattern.</hint>
 						</stemOption>
@@ -166,8 +166,8 @@
 						</type>
 							<name> Option2 </name>
 							<text> Bridge Pattern </text>
-							<location>URC</location>
-							<color> Yellow </color>
+							<location>ULC</location>
+							<color> RED </color>
 							<evaluation>Correct</evaluation>
 							<hint>The Bridge pattern decouples an interface and its implementation. The implementation can be modified without changing the interface. It is a structural pattern.</hint>							
 						</stemOption>
@@ -188,7 +188,7 @@
 						<name> Option3 </name>
 							<text> Factory Pattern </text>
 							<location>UR</location>
-							<color> Yellow </color>
+							<color> RED </color>
 							<evaluation>Incorrect</evaluation>		
 							<hint>The Factory pattern defines an interface for creating an object, but lets the classes that implement the interface decide which class to instantiate.  It is a creational pattern.</hint>					
 						</stemOption>
@@ -209,11 +209,10 @@
 						<name> Option4 </name>
 							<text> Singleton Pattern </text>
 							<location>DDLC</location>
-							<color> Yellow </color>
+							<color> RED </color>
 							<evaluation>Incorrect</evaluation>
 							<hint>The Singleton pattern that restricts the instantiation of a class to only one object. It is a creational pattern.</hint>
 						</stemOption>
-						<!-- </quiz> -->
 					</gameElement>							
 				</challengeStructure>
 								
@@ -242,7 +241,7 @@
 								<time>QUICK</time>								
 							</event>
                              	</type>
-						<color>YELLOW</color>
+						<color>RED</color>
 						<location>DC</location>
 						<size>SMALL</size>
 						<!-- -->
@@ -285,8 +284,8 @@
 									    
 							</if>							
 						</type>	
-						<color>YELLOW</color>
-						<location>UC</location>
+						<color>RED</color>
+						<location>UUC</location>
 						<size>MEDIUM</size>
 						<text>AAA</text>
 						<textSize>12</textSize>
@@ -320,7 +319,7 @@
 							</event>
 							
 						</type>
-						<color>YELLOW</color>
+						<color>RED</color>
 							<location>C</location>
 							<size>MEDIUM</size>
 							<!-- -->
@@ -367,8 +366,8 @@
 							</event>
                              
 						</type>
-						<color>YELLOW</color>
-						<location>LC</location>
+						<color>BLUE</color>
+						<location>RC</location>
 						<size>SMALL</size>
 						<!-- -->
 						<!-- The below text is presented on the button1 -->
