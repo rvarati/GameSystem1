@@ -2,7 +2,7 @@
 <!-- Top Level Game -->
 <game>
 <!-- Test Game2 contains 3 acts and one default character -->
-<!-- 		-->
+<!--**FINALIZED	-->
 <!-- 		-->
 
 <!-- The game contains a default player who is rewarded with 5000 points after playing the game -->
@@ -69,7 +69,7 @@
 		<sceneStructure>
 			
 				<identifier> scene1 </identifier>						
-				<backdrop>white-BG.png</backdrop>			
+				<backdrop>white-BG.jpg</backdrop>			
 			<!--		-->
 			<!-- The screens below present their respective information boxes that have a specific color and are displayed for a specific time depending on the act they belong to -->
 			<!--		-->
@@ -149,7 +149,7 @@
 		<sceneStructure>
 			
 				<identifier> scene2 </identifier>						
-				<backdrop>medGrey-BG.png</backdrop>			
+				<backdrop>medGrey-BG.jpg</backdrop>			
 			<!--		-->
 			<!-- The screens below present their respective information boxes that have a specific color and are displayed for a specific time depending on the act they belong to -->
 			<!--		-->
@@ -228,7 +228,7 @@
 		<sceneStructure>
 			
 				<identifier> scene3 </identifier>						
-				<backdrop>white-BG.png</backdrop>			
+				<backdrop>black-BG.jpg</backdrop>			
 			<!--		-->
 			<!-- The screens below present their respective information boxes that have a specific color and are displayed for a specific time depending on the act they belong to -->
 			<!--		-->
@@ -317,7 +317,7 @@
 		<sceneStructure>
 			
 				<identifier> scene1 </identifier>						
-				<backdrop>blue_bg.png</backdrop>			
+				<backdrop>white-BG.jpg</backdrop>			
 			<!--		-->
 			<!-- The screens below present their respective information boxes that have a specific color and are displayed for a specific time depending on the act they belong to -->
 			<!--		-->
@@ -396,7 +396,7 @@
 		<sceneStructure>
 			
 				<identifier> scene2 </identifier>						
-				<backdrop>blue_bg.png</backdrop>			
+				<backdrop>lightGrey.jpg</backdrop>			
 			<!--		-->
 			<!-- The screens below present their respective information boxes that have a specific color and are displayed for a specific time depending on the act they belong to -->
 			<!--		-->
@@ -475,7 +475,7 @@
 		<sceneStructure>
 			
 				<identifier> scene3 </identifier>						
-				<backdrop>blue_bg.png</backdrop>			
+				<backdrop>black-BG.jpg</backdrop>			
 			<!--		-->
 			<!-- The screens below present their respective information boxes that have a specific color and are displayed for a specific time depending on the act they belong to -->
 			<!--		-->
@@ -563,7 +563,7 @@
 		<sceneStructure>
 			
 				<identifier> scene1 </identifier>						
-				<backdrop>blue_bg.png</backdrop>			
+				<backdrop>white-BG.jpg</backdrop>			
 			<!--		-->
 			<!-- The screens below present their respective information boxes that have a specific color and are displayed for a specific time depending on the act they belong to -->
 			<!--		-->
@@ -642,7 +642,7 @@
 		<sceneStructure>
 			
 				<identifier> scene2 </identifier>						
-				<backdrop>blue_bg.png</backdrop>			
+				<backdrop>darkGrey.jpg</backdrop>			
 			<!--		-->
 			<!-- The screens below present their respective information boxes that have a specific color and are displayed for a specific time depending on the act they belong to -->
 			<!--		-->
@@ -721,7 +721,7 @@
 		<sceneStructure>
 			
 				<identifier> scene3 </identifier>						
-				<backdrop>blue_bg.png</backdrop>			
+				<backdrop>black-BG.jpg</backdrop>			
 			<!--		-->
 			<!-- The screens below present their respective information boxes that have a specific color and are displayed for a specific time depending on the act they belong to -->
 			<!--		-->
