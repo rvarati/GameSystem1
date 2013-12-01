@@ -106,7 +106,7 @@ public class GameViewFrame extends javax.swing.JFrame {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		jFrame.add(new ImagePanel(image));
+		jFrame.add(new ImagePanel(image), 1);
 		jFrame.setSize(FRAME_HEIGHT, FRAME_WIDTH);
 		jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		jFrame.setVisible(true);
