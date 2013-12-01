@@ -38,8 +38,8 @@ public class GamePlayEngine {
                 //gameModelBoundary.startGame("./GameXML/TestGame2_Variations/Button-ChangeV1.4.xml");
                 //gameModelBoundary.startGame("./GameXML/TestGame2_Variations/Button-Color-ChangeV1.2.xml");
                 //gameModelBoundary.startGame("./GameXML/TestGame3_Variations/InformationBox-ColorChangeV1.3.xml");
-                gameModelBoundary.startGame("./GameXML/TestGame3_Variations/Image-ChangeV1.3.xml");
-                //gameModelBoundary.startGame("./GameXML/TestGame4_Variations/TestGame4-Final.xml");
+               // gameModelBoundary.startGame("./GameXML/TestGame3_Variations/Image-ChangeV1.3.xml");
+                gameModelBoundary.startGame("./GameXML/TestGame4_Variations/TestGame4-Final.xml");
                 //gameModelBoundary.startGame("./GameXML/TestGame4_Variations/Color-ChangeV1.3.xml");
                 //gameModelBoundary.startGame("./GameXML/TestGame3_Variations/BackGround-Color-ChangeV1.3.xml");
                 //gameModelBoundary.startGame("./GameXML/TestGame5_Variations/TestGame5_new_1.xml");

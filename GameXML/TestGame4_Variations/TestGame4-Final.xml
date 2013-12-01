@@ -82,6 +82,7 @@
 							<id> screen1_a </id>
 						</gameElement>	
 				<challengeStructure>
+				<!--  <quiz> -->
 					<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 						xsi:type="prop">
 						<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -214,7 +215,8 @@
 							<hint>The Singleton pattern that restricts the instantiation of a class to only one object. It is a creational pattern.</hint>
 						</stemOption>
 						<!-- </quiz> -->
-					</gameElement>							
+					</gameElement>	
+							
 				</challengeStructure>
 								
 				</gameElement>
