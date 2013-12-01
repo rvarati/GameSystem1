@@ -75,7 +75,7 @@
 		</gameElement>
 		<sceneStructure>			
 			<identifier> scene1 </identifier>									
-			<backdrop>CollegeBuilding.png</backdrop> <!-- change this background to blue -->
+			<backdrop>blue_bg.png</backdrop> <!-- change this background to blue -->
 				<screenStructure>				
 				<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 						xsi:type="prop">
@@ -100,8 +100,8 @@
 						</type>
 						<behavior> NONE </behavior>
 							<color>YELLOW</color>
-							<location>C</location>
-							<size>LARGE</size>						
+							<location>UC</location>
+							<size>MEDIUM</size>						
 							<text>Welcome! Test Game 3</text>		
 					 						
 					</gameElement>
@@ -130,17 +130,21 @@
 						</type>
 							<behavior> NONE </behavior>
 							<color>YELLOW</color>
-							<location>C</location>
+							<location>UC</location>
 							<size>MEDIUM</size>
 							<text> A SoftiCorp Game </text>
 					</gameElement>
 				</screenStructure>
+				</sceneStructure>
+				<sceneStructure>
+				    <identifier> scene2 </identifier>									
+			        <backdrop>CollegeBuilding.png</backdrop> 
 				<screenStructure>
 				<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 						xsi:type="prop">
 						<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 							xsi:type="IDENTIFIER">
-							<id> screen3 </id>
+							<id> screen1 </id>
 						</gameElement>
 						<type>
 							<typeName>char9_StandClosed.png</typeName>				
@@ -155,7 +159,7 @@
 								<eventName>Hover</eventName>
 								<animation>FADEIN</animation>
 								<element>MessageBox</element>
-								<location>UC</location>
+								<location>UL</location>
 							<text>
 								<name> Ima Coder </name>
 								<id> Character1 </id>
@@ -178,7 +182,6 @@
 				</gameElement>			
 			</screenStructure>
 		</sceneStructure>
-		
-			</actStructure>
+		</actStructure>
 	</game>
 

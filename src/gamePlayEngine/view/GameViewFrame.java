@@ -310,7 +310,7 @@ public class GameViewFrame extends javax.swing.JFrame {
 
 			public void mouseEntered(MouseEvent e) {
 				System.out.println("Profile Information is : "+toDisplay);
-				jPanelScene = Util.panelPosition(Location.UC, false, prop);
+				jPanelScene = Util.panelPosition(Location.UL, false, prop);
 				ta = new JTextArea(toDisplay);
 				ta.setEditable(false);  // TODO so that it cannot be edited
 				ta.setBorder(BorderFactory.createLineBorder(Color.BLACK, 2));

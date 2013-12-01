@@ -383,9 +383,9 @@ public class GameController implements ActionListener {
 		return isQuizStart;
 	}
 	
-	/*public static boolean isQuizStart() {
+	public static boolean isQuizStart() {
 		boolean isQuizStart = false;
-		if (currentQuiz == quizToStart.getQuiz().size()) {
+		if (currentQuiz < challengeToStart.getQuiz().size()) {
 			isQuizStart = true;
 		}
 		return isQuizStart;
@@ -394,7 +394,7 @@ public class GameController implements ActionListener {
 	
 	public static void quizToPlay(GameState gameState) {
 
-		if (currentScreen < quizToStart.getQuiz().size()) {
+		if (currentQuiz < challengeToStart.getQuiz().size()) {
 			// screenToStart = sceneToStart.getScreens().get(currentScreen);
 			try {
 
@@ -407,8 +407,8 @@ public class GameController implements ActionListener {
 			}
 
 		}
-	}*/
-	
+	}
+
 	public static void quizToEnd(GameState gameState) {
 		currentScreen++;
 		try {
@@ -605,16 +605,16 @@ public class GameController implements ActionListener {
 			if (message == Message.PlayComplete) {
 				System.out
 						.println("Controller :ScreenPlayComplete message is received");
-				//quizToPlay(gameState);							
+				quizToPlay(gameState);							
 			}
 			if (message == Message.EndComplete) {
 				System.out
 						.println("Controller: Screen end complete message is received.");
 				//displayNext((Prop) gameState.getGameElement(),gameState);
-				/*if (isQuizStart())
+				if (isQuizStart())
 					quizToStart(gameState);
 				else
-					quizToEnd(gameState);*/
+					quizToEnd(gameState);
 			}
 	   }
 	}

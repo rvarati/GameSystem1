@@ -2,6 +2,7 @@ package gamePlayEngine.controller;
 
 import gamePlayEngine.model.act.Act;
 import gamePlayEngine.model.challenge.Quiz;
+import gamePlayEngine.model.gameElement.ChallengeStructure;
 import gamePlayEngine.model.gameElement.GameElement;
 import gamePlayEngine.model.scene.Scene;
 import gamePlayEngine.model.screen.Screen;
@@ -13,8 +14,8 @@ public class GameState {
 	Scene scene;
 	GameElement gameElement;
 	Quiz quiz;
+	ChallengeStructure challenge;
 	private String title;
-	
 	
 	
 	public String getTitle() {
@@ -74,6 +75,13 @@ public class GameState {
 	}
 	public void setQuiz(Quiz q) {
 		quiz = q;
+	}
+	
+	public ChallengeStructure getChallengeStructure() {
+		return challenge;
+	}
+	public void setChallengeStructure(ChallengeStructure c) {
+		this.challenge = c;
 	}
 
 	public Message getMessage() {

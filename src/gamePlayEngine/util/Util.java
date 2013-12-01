@@ -168,11 +168,11 @@ public class Util {
 			break;
 			
 		case UR:
-			jPanel.setBounds(600, 170, 200, 160);
+			jPanel.setBounds(600, 280, 200, 160);
 			jPanel.setOpaque(true);
 			break;
 		case URC:
-			jPanel.setBounds(600, 90, 200, 160);
+			jPanel.setBounds(600, 140, 200, 160);
 			jPanel.setOpaque(true);
 			break;
 		case UC:
@@ -184,7 +184,7 @@ public class Util {
 			jPanel.setOpaque(true);
 			break;
 		case UL:
-			jPanel.setBounds(800, 160, 200, 160);
+			jPanel.setBounds(200, 160, 250, 700);
 			jPanel.setOpaque(true);
 			break;
 		case R:
@@ -212,7 +212,7 @@ public class Util {
 			jPanel.setOpaque(true);
 			break;
 		case DRC:
-			jPanel.setBounds(200, 480, 200, 160);
+			jPanel.setBounds(100, 160, 200, 160);
 			jPanel.setOpaque(true);
 			break;
 		case DC:
@@ -240,7 +240,7 @@ public class Util {
 			//jPanel.setOpaque(true);
 			break;
 		case DDLC:
-			jPanel.setBounds(600, 260, 200, 160);
+			jPanel.setBounds(600, 420, 200, 160);
 			//jPanel.setOpaque(true);
 			break;
 		case DDL:

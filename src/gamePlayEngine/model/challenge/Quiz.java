@@ -4,6 +4,7 @@
 package gamePlayEngine.model.challenge;
 
 import java.util.List;
+import java.util.Observable;
 import java.util.Observer;
 
 import gamePlayEngine.controller.GameState;
@@ -22,6 +23,7 @@ public class Quiz extends ChallengeStructure {
 		private StemOption option;
 		private StemQuestion question;
 		private String timer;
+		private String identifier;
 		private  List<GameElement> gameElements;
 	
 		@XmlElement(name="gameElement")
@@ -57,7 +59,16 @@ public class Quiz extends ChallengeStructure {
 			notifyObservers(gameState);
 			
 		}
+		
+		@XmlElement(name = "identifier")
+		public String getIdentifier() {
+			return identifier;
+		}
 
+		public void setIdentifier(String identifier) {
+			this.identifier = identifier;
+		}
+		
 		public void quizEnd(GameState gameState) {
 			setChanged();
 			gameState.setMessage(Message.End);

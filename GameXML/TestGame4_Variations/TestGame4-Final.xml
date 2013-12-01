@@ -82,14 +82,14 @@
 							<id> screen1_a </id>
 						</gameElement>	
 				<challengeStructure>
-				<!--  <quiz> -->
+			    <quiz> 		    	     
 					<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 						xsi:type="prop">
 						<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 							xsi:type="IDENTIFIER">
-							<id> challenge1 </id>
+							<id> quiz1 </id>
 						</gameElement>
-						<!-- <quiz> -->
+					
 <!-- 
 ++++ acts, scenes, screens, challenges are not game elements - need to rename
 ++++ challenge can have one or more items in it (questions)
@@ -213,23 +213,20 @@
 							<color> Yellow </color>
 							<evaluation>Incorrect</evaluation>
 							<hint>The Singleton pattern that restricts the instantiation of a class to only one object. It is a creational pattern.</hint>
-						</stemOption>
-						<!-- </quiz> -->
+						</stemOption>	
+													
 					</gameElement>	
-							
+				  </quiz> 
 				</challengeStructure>
 								
 				</gameElement>
-				<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			 	<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 						xsi:type="prop">
 						<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 							xsi:type="IDENTIFIER">
 							<id> screen2 </id>
 						</gameElement>
-						<!-- -->
-						<!-- The Stop method to stop the all the acts, scenes and screens is 
-							called when the player clicks on button1 to stop the game -->
-						<!-- -->
+						
 						<behavior>Submit</behavior>
 						<type>
 							<typeName>Button3</typeName>
@@ -247,18 +244,16 @@
 						<color>YELLOW</color>
 						<location>DC</location>
 						<size>SMALL</size>
-						<!-- -->
+						
 						<!-- The below text is presented on the button1 -->
-						<!-- -->
+						
 						<text>Submit </text>
 						<textSize>12</textSize>
 					    <font>Comic Sans MS-PLAIN-12</font>
 					    <next>screen56</next>						
-					</gameElement>
+					</gameElement> 
 			</screenStructure>
-			
-					
-			
+						
 			<screenStructure>
 				<gameElement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 						xsi:type="prop">
@@ -288,7 +283,7 @@
 							</if>							
 						</type>	
 						<color>YELLOW</color>
-						<location>UC</location>
+						<location>DRC</location>
 						<size>MEDIUM</size>
 						<text>AAA</text>
 						<textSize>12</textSize>
@@ -323,7 +318,7 @@
 							
 						</type>
 						<color>YELLOW</color>
-							<location>C</location>
+							<location>UC</location>
 							<size>MEDIUM</size>
 							<!-- -->
 							<!-- The below text is appended with the points that the GetPoints 
@@ -333,7 +328,7 @@
 							<!-- -->
 							
 							
-						<text>Your POINTS:  </text>
+						<text>Your points are </text>
 							<textSize>12</textSize>
 							<font>Aerial</font>
 						<behavior> Reward </behavior>
@@ -370,7 +365,7 @@
                              
 						</type>
 						<color>YELLOW</color>
-						<location>LC</location>
+						<location>DLC</location>
 						<size>SMALL</size>
 						<!-- -->
 						<!-- The below text is presented on the button1 -->

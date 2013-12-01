@@ -149,15 +149,13 @@ public class GameView implements Observer {
 					System.out.println("Current prop is instance of Prop");
 					ChallengeStructure challengeStructure = currentProp
 							.getChallengeStructure();
-					//Quiz q = challengeStructure.getQuiz();
-					//System.out.println("get quiz");
+					
 					if (challengeStructure != null) {
-					//if (q != null) {
-						// TODO Displayed first challengeStructure. Need to
-						// display the subsequent challenge structures.
-						Prop prop = (Prop) challengeStructure.getGameElements()
-								.get(0);
-						//Prop prop = (Prop) q.getGameElements().get(0);
+						//Prop prop = (Prop) challengeStructure.getGameElements()
+							//	.get(0);
+						Quiz quiz = challengeStructure.getQuiz();
+						
+						Prop prop = (Prop) quiz.getGameElements().get(0);
 						StemDescription stemDescription = prop
 								.getStemDescription();
 						

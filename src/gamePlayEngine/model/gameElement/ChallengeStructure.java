@@ -29,7 +29,7 @@ public class ChallengeStructure extends Observable{
 		return quiz;
 	}
 	
-	public void setQuiz() {
+	public void setQuiz(Quiz quiz) {
 		this.quiz = quiz;
 	}
 	
@@ -40,9 +40,9 @@ public class ChallengeStructure extends Observable{
 	}
 
 	public void challengeStart(GameState gameState) {
-		// Handle Act specific activities in complex games
+		
 		setChanged();
-		//gameState.setChallenge(this);
+		gameState.setChallengeStructure(this);
 		gameState.setMessage(Message.Start);
 		notifyObservers(gameState);
 	}
@@ -54,6 +54,15 @@ public class ChallengeStructure extends Observable{
 		gameState.setMessage(Message.Play);
 		notifyObservers(gameState);
 		
+	}
+	
+	public void challengeEnd(GameState gameState) {
+		//backdrop.gameElementEnd();
+		setChanged();
+		gameState.setMessage(Message.End);		
+		gameState.setQuiz(null);
+		gameState.setGameElement(null);
+		notifyObservers(gameState);
 	}
 	
 	
