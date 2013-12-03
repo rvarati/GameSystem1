@@ -199,6 +199,7 @@ public class GameViewFrame extends javax.swing.JFrame {
 		layeredPane.add(jPanelScene, 200);
 				
 		displayNext(currentProp, gameState);
+		
 	}
 
 	public JFrame createNewFrame(String name, ImagePanel image) {
@@ -268,6 +269,7 @@ public class GameViewFrame extends javax.swing.JFrame {
 		ip.setSize(250, 400);
 		//jFrame.add(l);
 		//jPanelScene.add(ip);
+		
 		layeredPane.add(ip);
 	    //layeredPane.add(jPanelScene, JLayeredPane.PALETTE_LAYER);
 	    //layeredPane.setVisible(true);

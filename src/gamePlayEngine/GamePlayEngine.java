@@ -38,10 +38,10 @@ public class GamePlayEngine {
                 //gameModelBoundary.startGame("./GameXML/TestGame2_Variations/TestGame2-Final.xml");
                 
                 //Test Game 3
-               // gameModelBoundary.startGame("./GameXML/TestGame3_Variations/TestGame3-Final.xml");
+                gameModelBoundary.startGame("./GameXML/TestGame3_Variations/TestGame3-Final.xml");
                 
                 //Test Game 4
-                gameModelBoundary.startGame("./GameXML/TestGame4_Variations/TestGame4-Final.xml");
+               // gameModelBoundary.startGame("./GameXML/TestGame4_Variations/TestGame4-Final.xml");
                 
                 //Test Game 5
                 //gameModelBoundary.startGame("./GameXML/TestGame1_Variations/Button-ChangeV1.4.xml");               

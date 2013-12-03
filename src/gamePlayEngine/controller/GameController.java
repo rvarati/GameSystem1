@@ -12,6 +12,7 @@ import java.util.Observable;
 import gamePlayEngine.model.act.Act;
 import gamePlayEngine.model.challenge.Challenge;
 import gamePlayEngine.model.challenge.Quiz;
+import gamePlayEngine.model.gameElement.ChallengeStructure;
 import gamePlayEngine.model.gameElement.GameElement;
 import gamePlayEngine.model.gameElement.graphic.Prop;
 import gamePlayEngine.model.gameElement.player.reward.RewardBoundary;
@@ -38,11 +39,12 @@ public class GameController implements ActionListener {
 	private static int currentScreen;
 	private static int currentGameElement;
 	private static int currentQuiz;
+	private static int currentChallenge;
 	private static Act actToStart = new Act();
 	private static Scene sceneToStart = new Scene();
 	private static Screen screenToStart = new Screen();
 	private static GameElement gameElementToStart = new GameElement();
-	private static Challenge challengeToStart = new Challenge();
+	private static ChallengeStructure challengeToStart = new ChallengeStructure();
 	private static Quiz quizToStart = new Quiz();
 
 
@@ -363,17 +365,68 @@ public class GameController implements ActionListener {
 		}
 	}
 	
+	public static boolean challengeToStart(GameState gameState) {
+
+		boolean isChallengeStart = false;
+		if (gameElementToStart.getChallengeStructure() != null) {
+			currentChallenge = 1;
+			isChallengeStart = true;
+			
+			challengeToStart = gameElementToStart.getChallengeStructure();
+			try {
+				challengeToStart.challengeStart(gameState);
+
+			} catch (Exception e) {
+				System.err.print(e);
+			}
+		}
+		return isChallengeStart;
+	}
+	
+	public static boolean isChallengeStart() {
+		boolean isChallengeStart = false;
+		if (currentChallenge > 0) {
+			isChallengeStart = true;
+		}
+		return isChallengeStart;
+
+	}
+	
+	public static void challengeToPlay(GameState gameState) {
+
+		try {
+
+				challengeToStart.challengePlay(gameState);
+
+			}
+
+			catch (Exception e) {
+				System.err.print(e);
+			}
+
+		
+	}
+
+	public static void challengeToEnd(GameState gameState) {
+		currentChallenge++;
+		try {
+			challengeToStart.challengeEnd(gameState);
+
+		} catch (Exception e) {
+			System.err.print(e);
+		}
+	}
 	public static boolean quizToStart(GameState gameState) {
 
 		boolean isQuizStart = false;
-		if (currentQuiz < challengeToStart.getQuiz().size()) {
-			isQuizStart = true;
-			currentQuiz = 0;
-			quizToStart = challengeToStart.getQuiz().get(currentQuiz);
-			try {
+		if (challengeToStart.getQuiz() != null) {
+	      isQuizStart = true;
+		currentQuiz = 0;
+		quizToStart = challengeToStart.getQuiz();
+		try {
 
-				quizToStart.quizStart(gameState);
-			}
+			quizToStart.quizStart(gameState);
+		}
 
 			catch (Exception e) {
 				System.err.print(e);
@@ -385,7 +438,7 @@ public class GameController implements ActionListener {
 	
 	public static boolean isQuizStart() {
 		boolean isQuizStart = false;
-		if (currentQuiz < challengeToStart.getQuiz().size()) {
+		if (currentQuiz > 0) {
 			isQuizStart = true;
 		}
 		return isQuizStart;
@@ -394,9 +447,7 @@ public class GameController implements ActionListener {
 	
 	public static void quizToPlay(GameState gameState) {
 
-		if (currentQuiz < challengeToStart.getQuiz().size()) {
-			// screenToStart = sceneToStart.getScreens().get(currentScreen);
-			try {
+		try {
 
 				quizToStart.quizPlay(gameState);
 
@@ -406,11 +457,11 @@ public class GameController implements ActionListener {
 				System.err.print(e);
 			}
 
-		}
+		
 	}
 
 	public static void quizToEnd(GameState gameState) {
-		currentScreen++;
+		currentQuiz++;
 		try {
 			quizToStart.quizEnd(gameState);
 
@@ -597,19 +648,19 @@ public class GameController implements ActionListener {
 		if (Quiz.class.isInstance(observable)) {
 			if (message == Message.StartComplete) {
 				System.out
-						.println("Controller :ScreenStartComplete message is received");
+						.println("Controller :QuizStartComplete message is received");
 				quizToStart(gameState);
 				
 
 			}
 			if (message == Message.PlayComplete) {
 				System.out
-						.println("Controller :ScreenPlayComplete message is received");
+						.println("Controller :QuizPlayComplete message is received");
 				quizToPlay(gameState);							
 			}
 			if (message == Message.EndComplete) {
 				System.out
-						.println("Controller: Screen end complete message is received.");
+						.println("Controller: Quiz end complete message is received.");
 				//displayNext((Prop) gameState.getGameElement(),gameState);
 				if (isQuizStart())
 					quizToStart(gameState);
@@ -617,5 +668,28 @@ public class GameController implements ActionListener {
 					quizToEnd(gameState);
 			}
 	   }
+		if (ChallengeStructure.class.isInstance(observable)) {
+			if (message == Message.StartComplete) {
+				System.out
+						.println("Controller : ChallengeStartComplete message is received");
+				challengeToStart(gameState);
+				
+
+			}
+			if (message == Message.PlayComplete) {
+				System.out
+						.println("Controller : ChallengePlayComplete message is received");
+				challengeToPlay(gameState);							
+			}
+			if (message == Message.EndComplete) {
+				System.out
+						.println("Controller: Challengeend complete message is received.");
+				//displayNext((Prop) gameState.getGameElement(),gameState);
+				if (isQuizStart())
+					challengeToStart(gameState);
+				else
+					challengeToEnd(gameState);
+			}
+		}
 	}
 }
